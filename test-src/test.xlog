@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+<logkit log-level="WARN">
+    <factories>
+      <factory type="stream" class="org.apache.avalon.excalibur.logger.factory.StreamTargetFactory"/>
+      <factory type="file" class="org.apache.avalon.excalibur.logger.factory.FileTargetFactory"/>
+      <factory type="test" class="org.rapla.RaplaTestLogManager"/>
+    </factories>
+
+    <targets> 
+      <stream id="root">
+         <stream>System.out</stream>
+         <format type="extended">
+           %7.7{priority} %1.13{time:HH:mm:ss:S}  [%5.25{category}]: %{message}\n%{throwable}
+         </format>
+       </stream>
+       <file id="file">
+         <filename>${context-root}/testing.log</filename>
+         <format type="extended">
+           %5.5{priority} %17.17{time:dd/MM HH:mm:ss:S} [%5.25{category}]: %{message}\n%{throwable}
+         </format>
+         <append>true</append>
+         <rotation type="revolving" init="1" max="4">
+           <size>1m</size>
+         </rotation>
+       </file>
+       <test id="test"/>
+     </targets>
+
+     <categories>
+       <category name="" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="rapla" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="facade" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="file" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="file.trigger.allocation" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="sql" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="remote" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="default-server" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="messaging" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="storage" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="shutdown" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="importexport" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="system" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+       <category name="org.rapla.RaplaResources" log-level="WARN">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="test"/> 
+       </category>
+     </categories>
+
+</logkit>

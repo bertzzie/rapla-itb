@@ -1,0 +1,278 @@
+a, a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    background-color: #FFFF88;
+}
+#calendar a span.tooltip {
+    display: none;
+}
+
+#calendar a span td {
+    padding: 0px;
+    font-size: small;
+    color: black;
+}
+
+#legend {
+    align: center;
+    border-width: 0px;
+}
+
+#legend a span {
+    display: none;
+}
+
+#legend a span td {
+    padding: 0px;
+    font-size: small;
+    color: black;
+}
+
+#calendar {
+   width: 100%;
+}
+
+/** calendar tooltip */
+#calendar a:hover span.tooltip {
+    display: block;
+    bottom: 0.5em;
+    right: 0.5em;
+    padding: .5em;
+    z-index: 1;
+    font-size: small;
+    color: black;
+    background-color: #FFFF88;
+/*  Doesn't  work in IE  */
+   position: fixed;
+   width: 500px;
+   border: 2px solid #000000;
+}
+
+/* woraround for IE */
+#calendar a:hover span.tooltip {
+  // position: absolute;
+}
+
+/** legend tooltip */
+#legend a:hover span {
+    display: block;
+    bottom: 0.5em;
+    right: 0.5em;
+    padding: .5em;
+    z-index: 1;
+    font-size: small;
+    color: black;
+    background-color: #FFFF88;
+/*  Doesn't  work in IE
+    position: fixed;
+    width: auto;
+ */
+    position: absolute;
+    width: 500px;
+    border: 2px solid #000000;
+}
+
+
+.title {
+   text-align:center;
+}
+
+.datechooser {
+   text-align:center;
+}
+
+
+.week_table {
+    width: 100%;
+    empty-cells: show;
+    border-spacing:0px;
+    border-bottom-width:3px;
+    border-bottom-style:solid;
+    border-right-width:1px;
+    border-right-style:solid;
+
+    padding:0px;
+    border-color:black;
+/* workaround for IE */
+//    border-collapse:collapse;
+    background-color: #FFFFFF;
+}
+
+.week_emptycell_black {
+   font-size:9px;
+   margin: 0px;
+   border-top-style:solid;
+   border-top-width:1px;
+   border-left-width:0px;
+   border-right-width:0px;
+   padding-left: 0px;
+   padding-right: 0px;
+}
+
+.week_separatorcell_black {
+   font-size:9px;
+   border-top-width:1px;
+   border-top-style:solid;
+   border-left-width:0px;
+   border-right-width:1px;
+   border-right-style:solid;
+   padding-left: 1px;
+   border-right-color: #CCCCCC;
+}
+.week_smallseparatorcell_black {
+   font-size:9px;
+   border-left-width:0px;
+   border-right-width:0px;
+   border-top-width:1px;
+   border-top-style:solid;
+   padding-left: 1px;
+   padding-right: 1px;
+   margin-left: 0px;
+   margin-right: 0px;
+}
+
+.week_emptycell {
+   font-size:9px;
+   margin: 0px;
+   border-color:#CCCCCC;
+   border-top-style:solid;
+   border-top-width:1px;
+   border-left-width:0px;
+   border-right-width:0px;
+   padding-left: 0px;
+   padding-right: 0px;
+}
+
+.week_separatorcell {
+   font-size:9px;
+   border-top-width:1px;
+   border-color:#CCCCCC;
+   border-top-style:solid;
+   border-left-width:0px;
+   border-right-width:1px;
+   border-right-style:solid;
+   padding-left: 1px;
+}
+.week_smallseparatorcell {
+   font-size:9px;
+   border-color:#CCCCCC;
+   border-left-width:0px;
+   border-right-width:0px;
+   border-top-width:1px;
+   border-top-style:solid;
+   padding-left: 1px;
+   padding-right: 1px;
+   margin-left: 0px;
+   margin-right: 0px;
+}
+
+.week_header {
+   background-color: #DDDDDD;
+   text-align: left;
+   padding-left: 5px;
+   padding-right: 5px;
+   border-right-width:1px;
+   border-right-style:solid;
+   border-left-width:1px;
+   border-left-style:solid;
+   border-top-width:1px;
+   border-top-style:solid;
+   border-bottom-width:1px;
+   border-bottom-style:solid;
+}
+
+.week_number {
+    font-size: 0.9em;
+   padding-left: 10px;
+   padding-right: 10px;
+   text-align: center;
+   white-space: nowrap;
+}
+
+
+.week_times {
+   background-color: #DDDDDD;
+   text-align:right;
+   padding-right: 7px;
+   vertical-align: top;
+   border-left-width:1px;
+   border-right-width:1px;
+   border-top-width:1px;
+   border-left-style:solid;
+   border-right-style:solid;
+   border-top-style:solid;
+}
+
+.week_block {
+   margin: 0px;
+   padding: 3px;
+   border-left-width:1px;
+   border-right-width:1px;
+   border-top-width:1px;
+   border-left-style:solid;
+   border-right-style:solid;
+   border-top-style:solid;
+   font-size: 9pt;
+}
+
+.month_table {
+   width: 100%;
+   background-color: #FFFFFF;
+   empty-cells: show;
+   border-spacing:0px;
+/* workaround for IE */
+//   border-collapse:collapse;
+   border: 1px;
+}
+
+.month_header {
+   background-color: #DDDDDD;
+   text-align: center;
+   border:1px;
+   border-style:solid;
+}
+
+.month_cell {
+   border:1px;
+   border-style:solid;
+}
+
+.month_block {
+   font-size: 8pt;
+/*
+   border:1px;
+*/
+   margin-bottom: 1px;
+}
+
+
+.person {
+   font-size: 10pt;
+   font-style: italic;
+}
+
+.resource {
+   font-size: 10pt;
+}
+
+.link {
+   text-decoration: underline;
+}
+
+.eventtable
+{
+  width:100%;
+}
+
+@page {
+  size: landscape;
+}
+
+@media print {
+   .datechooser {
+     display: none;
+   }
+}

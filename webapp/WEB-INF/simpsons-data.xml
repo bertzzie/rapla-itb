@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?><!--*- coding: utf-8 -*-->
+<rapla:data xmlns:rapla="http://rapla.sourceforge.net/rapla"
+ xmlns:relax="http://relaxng.org/ns/structure/1.0"
+ xmlns:dynatt="http://rapla.sourceforge.net/dynamictype"
+ xmlns:doc="http://rapla.sourceforge.net/annotation"
+ version="1.0">
+   <rapla:categories>
+      <rapla:category key="department">
+         <doc:name lang="de">Verwaltungseinheit</doc:name>
+         <doc:name lang="en">Administrative Entity</doc:name>
+         <rapla:category key="channel-6">
+            <doc:name lang="en">channel-6</doc:name>
+         </rapla:category>
+         <rapla:category key="elementary-springfield">
+            <doc:name lang="en">elementary-springfield</doc:name>
+         </rapla:category>
+         <rapla:category key="springfield-powerplant">
+            <doc:name lang="en">springfield powerplant</doc:name>
+            <rapla:category key="security-department">
+               <doc:name lang="de">Sicherheitabteilung</doc:name>
+               <doc:name lang="en">securitydepartment</doc:name>
+            </rapla:category>
+            <rapla:category key="waste-disposal">
+               <doc:name lang="de">Abfallbeseitigung</doc:name>
+               <doc:name lang="en">waste disposal</doc:name>
+            </rapla:category>
+         </rapla:category>
+      </rapla:category>
+      <rapla:category key="resources">
+         <doc:name lang="de">Ressourcen</doc:name>
+         <doc:name lang="en">resources</doc:name>
+         <rapla:category key="vehicle-types">
+            <doc:name lang="de">Fahrzeugtypen</doc:name>
+            <doc:name lang="en">vehicle-types</doc:name>
+            <rapla:category key="bus">
+               <doc:name lang="de">Bus</doc:name>
+               <doc:name lang="en">bus</doc:name>
+            </rapla:category>
+            <rapla:category key="car">
+               <doc:name lang="de">PKW</doc:name>
+               <doc:name lang="en">car</doc:name>
+            </rapla:category>
+         </rapla:category>
+         <rapla:category key="room-types">
+            <doc:name lang="de">Raumtypen</doc:name>
+            <doc:name lang="en">room-types</doc:name>
+            <rapla:category key="classroom">
+               <doc:name lang="de">Klassenraum</doc:name>
+               <doc:name lang="en">classroom</doc:name>
+            </rapla:category>
+            <rapla:category key="studio">
+               <doc:name lang="de">Studio</doc:name>
+               <doc:name lang="en">studio</doc:name>
+            </rapla:category>
+            <rapla:category key="bar">
+               <doc:name lang="de">Bar</doc:name>
+               <doc:name lang="en">bar</doc:name>
+            </rapla:category>
+            <rapla:category key="conferenceroom">
+               <doc:name lang="de">Konferenzraum</doc:name>
+               <doc:name lang="en">conference room</doc:name>
+            </rapla:category>
+         </rapla:category>
+      </rapla:category>
+      <rapla:category key="lecture">
+         <doc:name lang="de">Vorlesung</doc:name>
+         <doc:name lang="en">lecture</doc:name>
+         <rapla:category key="level">
+            <doc:name lang="de">Schwierigkeitsgrade</doc:name>
+            <doc:name lang="en">difficulty levels</doc:name>
+            <rapla:category key="too-easy">
+               <doc:name lang="de">viel zu einfach</doc:name>
+               <doc:name lang="en">too simple</doc:name>
+            </rapla:category>
+            <rapla:category key="too-hard">
+               <doc:name lang="de">viel zu schwierig</doc:name>
+               <doc:name lang="en">too hard</doc:name>
+            </rapla:category>
+            <rapla:category key="too-boring">
+               <doc:name lang="de">zu langweilig</doc:name>
+               <doc:name lang="en">too boring</doc:name>
+            </rapla:category>
+         </rapla:category>
+      </rapla:category>
+      <rapla:category key="user-groups">
+         <doc:name lang="de">Benutzergruppen</doc:name>
+         <doc:name lang="en">user-groups</doc:name>
+         <rapla:category key="registerer">
+            <doc:name lang="de">Ressourcen eintragen</doc:name>
+            <doc:name lang="en">register resources</doc:name>
+            <doc:name lang="fr">Enregistrer des ressources</doc:name>
+         </rapla:category>
+         <rapla:category key="modify-preferences">
+            <doc:name lang="de">Einstellungen bearbeiten</doc:name>
+            <doc:name lang="en">modify preferences</doc:name>
+            <doc:name lang="fr">Modifier la préférence</doc:name>
+         </rapla:category>
+      </rapla:category>
+   </rapla:categories>
+
+   <relax:grammar>
+      <relax:define name="vehicle">
+         <relax:element name="dynatt:vehicle">
+            <doc:name lang="de">Fahrzeug</doc:name>
+            <doc:name lang="en">vehicle</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="classification-type">resource</rapla:annotation>
+               <rapla:annotation key="nameformat">{name}</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="name">
+               <doc:name lang="de">Name</doc:name>
+               <doc:name lang="en">name</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="hp">
+               <doc:name lang="de">PS</doc:name>
+               <doc:name lang="en">hp</doc:name>
+               <relax:data type="int"/>
+            </relax:element>
+            <relax:element name="seats">
+               <doc:name lang="de">Anzahl Plätze</doc:name>
+               <doc:name lang="en">number of seats</doc:name>
+               <relax:data type="int"/>
+            </relax:element>
+            <relax:optional>
+               <relax:element name="belongsto">
+                  <doc:name lang="de">gehört zu</doc:name>
+                  <doc:name lang="en">belongs to</doc:name>
+                  <relax:data type="rapla:category"/>
+                  <rapla:constraint name="root-category">category[key='department']</rapla:constraint>
+               </relax:element>
+            </relax:optional>
+            <relax:element name="vehicle-type">
+               <doc:name lang="de">Fahrzeugtyp</doc:name>
+               <doc:name lang="en">type of vehicle</doc:name>
+               <relax:data type="rapla:category"/>
+               <rapla:constraint name="root-category">category[key='resources']/category[key='vehicle-types']</rapla:constraint>
+            </relax:element>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="room">
+         <relax:element name="dynatt:room">
+            <doc:name lang="de">Raum</doc:name>
+            <doc:name lang="en">room</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="classification-type">resource</rapla:annotation>
+               <rapla:annotation key="nameformat">{name}</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="name">
+               <doc:name lang="de">Name</doc:name>
+               <doc:name lang="en">name</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="blackboard">
+               <doc:name lang="de">Tafel</doc:name>
+               <doc:name lang="en">blackboard</doc:name>
+               <relax:data type="boolean"/>
+            </relax:element>
+            <relax:element name="seats">
+               <doc:name lang="de">Anzahl der Plätze</doc:name>
+               <doc:name lang="en">number of seats</doc:name>
+               <relax:data type="int"/>
+            </relax:element>
+            <relax:element name="room-type">
+               <doc:name lang="de">Raumtyp</doc:name>
+               <doc:name lang="en">type of room</doc:name>
+               <relax:data type="rapla:category"/>
+               <rapla:constraint name="root-category">category[key='resources']/category[key='room-types']</rapla:constraint>
+            </relax:element>
+            <relax:optional>
+               <relax:element name="belongsto">
+                  <doc:name lang="de">gehört zu</doc:name>
+                  <doc:name lang="en">belongs to</doc:name>
+                  <relax:data type="rapla:category"/>
+                  <rapla:constraint name="root-category">category[key='department']</rapla:constraint>
+               </relax:element>
+            </relax:optional>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="lecturer">
+         <relax:element name="dynatt:lecturer">
+            <doc:name lang="de">Dozent</doc:name>
+            <doc:name lang="en">lecturer</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="classification-type">person</rapla:annotation>
+               <rapla:annotation key="nameformat">{surname} {forename}</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="title">
+               <doc:name lang="de">Titel</doc:name>
+               <doc:name lang="en">title</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="surname">
+               <doc:name lang="de">Nachname</doc:name>
+               <doc:name lang="en">surname</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="forename">
+               <doc:name lang="de">Vorname</doc:name>
+               <doc:name lang="en">forename</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="email">
+               <doc:name lang="de">email</doc:name>
+               <doc:name lang="en">email</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:optional>
+               <relax:element name="worksfor">
+                  <doc:name lang="de">arbeitet für</doc:name>
+                  <doc:name lang="en">works for</doc:name>
+                  <relax:data type="rapla:category"/>
+                  <rapla:constraint name="root-category">category[key='department']</rapla:constraint>
+               </relax:element>
+            </relax:optional>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="meeting">
+         <relax:element name="dynatt:meeting">
+            <doc:name lang="de">Meeting</doc:name>
+            <doc:name lang="en">meeting</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="classification-type">reservation</rapla:annotation>
+               <rapla:annotation key="nameformat">{name}</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="name">
+               <doc:name lang="de">Name</doc:name>
+               <doc:name lang="en">name</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="public">
+               <doc:name lang="de">Gäste erlaubt</doc:name>
+               <doc:name lang="en">guests permitted</doc:name>
+               <relax:data type="boolean"/>
+            </relax:element>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="lecture">
+         <relax:element name="dynatt:lecture">
+            <doc:name lang="de">Vorlesung</doc:name>
+            <doc:name lang="en">lecture</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="classification-type">reservation</rapla:annotation>
+               <rapla:annotation key="nameformat">{name}</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="name">
+               <doc:name lang="de">Name</doc:name>
+               <doc:name lang="en">name</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="difficulty">
+               <doc:name lang="de">Schwierigkeitsgrad</doc:name>
+               <doc:name lang="en">difficulty level</doc:name>
+               <relax:data type="rapla:category"/>
+               <rapla:constraint name="root-category">category[key='lecture']/category[key='level']</rapla:constraint>
+            </relax:element>
+         </relax:element>
+      </relax:define>
+
+      <relax:start>
+         <relax:choice>
+            <relax:ref name="vehicle"/>
+            <relax:ref name="room"/>
+            <relax:ref name="lecturer"/>
+            <relax:ref name="meeting"/>
+            <relax:ref name="lecture"/>
+         </relax:choice>
+      </relax:start>
+   </relax:grammar>
+
+   <rapla:preferences>
+      <rapla:entry key="org.rapla.plugin">
+         <rapla:config>
+            <pluginlist>
+               <plugin enabled="true" class="org.rapla.plugin.periodwizard.PeriodWizardPlugin"/>
+               <plugin enabled="true" class="org.rapla.plugin.autoexport.AutoExportPlugin"/>
+            </pluginlist>
+         </rapla:config>
+      </rapla:entry>
+   </rapla:preferences>
+
+   <rapla:users>
+      <!-- Users of the system -->
+      <rapla:user id="user_1" username="" password="" name="Herschel Krustofski" email="krusty@channel6.com" isAdmin="true">
+         <rapla:group key="category[key='modify-preferences']"/>
+      </rapla:user>
+      <rapla:user id="user_2" username="admin" password="" name="Monty Burns" email="chief@power-plant.sim" isAdmin="true">
+         <rapla:group key="category[key='modify-preferences']"/>
+      </rapla:user>
+      <rapla:user id="user_3" username="homer" password="duffs" name="Homer Simpson" email="simpson@security.power-plant.sim" isAdmin="true">
+         <rapla:group key="category[key='modify-preferences']"/>
+      </rapla:user>
+      <rapla:user id="user_4" username="skinner" password="edna" name="Seymour Skinner" email="scinner@elementary-springfield.edu" isAdmin="false">
+         <rapla:group key="category[key='modify-preferences']"/>
+      </rapla:user>
+      <rapla:user id="user_5" username="abe" password="matlock" name="Abraham Simpson" email="abe@retirement-castle.old" isAdmin="false">
+         <rapla:group key="category[key='modify-preferences']"/>
+      </rapla:user>
+      <rapla:user id="user_6" username="selma" password="jubjub" name="Herschel Krustofski" email="krusty@channel6.com" isAdmin="false">
+         <rapla:group key="category[key='modify-preferences']"/>
+      </rapla:user>
+      <rapla:user id="user_7" username="lisa" password="lisa" name="Lisa Simpson" email="lisa@mensa.org" isAdmin="false">
+         <rapla:group key="category[key='modify-preferences']"/>
+      </rapla:user>
+   </rapla:users>
+
+   <rapla:resources>
+      <!-- resources -->
+      <rapla:resource id="resource_1">
+         <dynatt:room>
+            <dynatt:name>room A66</dynatt:name>
+            <dynatt:blackboard>true</dynatt:blackboard>
+            <dynatt:seats>30</dynatt:seats>
+            <dynatt:room-type>category[key='conferenceroom']</dynatt:room-type>
+            <dynatt:belongsto>category[key='springfield-powerplant']/category[key='security-department']</dynatt:belongsto>
+         </dynatt:room>
+         <rapla:permission/>
+      </rapla:resource>
+      <rapla:resource id="resource_2">
+         <dynatt:room>
+            <dynatt:name>classroom 3a</dynatt:name>
+            <dynatt:blackboard>true</dynatt:blackboard>
+            <dynatt:seats>24</dynatt:seats>
+            <dynatt:room-type>category[key='classroom']</dynatt:room-type>
+            <dynatt:belongsto>category[key='elementary-springfield']</dynatt:belongsto>
+         </dynatt:room>
+         <rapla:permission/>
+      </rapla:resource>
+      <rapla:resource id="resource_4">
+         <dynatt:room>
+            <dynatt:name>studio 1</dynatt:name>
+            <dynatt:blackboard>false</dynatt:blackboard>
+            <dynatt:seats>150</dynatt:seats>
+            <dynatt:room-type>category[key='studio']</dynatt:room-type>
+            <dynatt:belongsto>category[key='channel-6']</dynatt:belongsto>
+         </dynatt:room>
+         <rapla:permission/>
+      </rapla:resource>
+      <rapla:resource id="resource_6">
+         <dynatt:vehicle>
+            <dynatt:name>Ottos bus</dynatt:name>
+            <dynatt:hp>250</dynatt:hp>
+            <dynatt:seats>50</dynatt:seats>
+            <dynatt:belongsto>category[key='elementary-springfield']</dynatt:belongsto>
+            <dynatt:vehicle-type>category[key='bus']</dynatt:vehicle-type>
+         </dynatt:vehicle>
+         <rapla:permission/>
+      </rapla:resource>
+      <rapla:resource id="resource_7">
+         <dynatt:room>
+            <dynatt:name>Moes bar</dynatt:name>
+            <dynatt:blackboard>false</dynatt:blackboard>
+            <dynatt:seats>50</dynatt:seats>
+            <dynatt:room-type>category[key='bar']</dynatt:room-type>
+         </dynatt:room>
+         <rapla:permission/>
+      </rapla:resource>
+      <rapla:person id="resource_8">
+         <dynatt:lecturer>
+            <dynatt:title>Principal</dynatt:title>
+            <dynatt:surname>Skinner</dynatt:surname>
+            <dynatt:forename>Seymour</dynatt:forename>
+            <dynatt:email>scinner@elementary-springfield.edu</dynatt:email>
+            <dynatt:worksfor>category[key='elementary-springfield']</dynatt:worksfor>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_9">
+         <dynatt:lecturer>
+            <dynatt:surname>Simpson</dynatt:surname>
+            <dynatt:forename>Homer</dynatt:forename>
+            <dynatt:email>simpson@security.power-plant.sim</dynatt:email>
+            <dynatt:worksfor>category[key='springfield-powerplant']</dynatt:worksfor>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_10">
+         <dynatt:lecturer>
+            <dynatt:title>Mr.</dynatt:title>
+            <dynatt:surname>Burns</dynatt:surname>
+            <dynatt:forename>Monty</dynatt:forename>
+            <dynatt:email>chief@power-plant.sim</dynatt:email>
+            <dynatt:worksfor>category[key='springfield-powerplant']</dynatt:worksfor>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_11">
+         <dynatt:lecturer>
+            <dynatt:surname>Gumble</dynatt:surname>
+            <dynatt:forename>Barney</dynatt:forename>
+            <dynatt:email>gumble@duff.beer</dynatt:email>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_12">
+         <dynatt:lecturer>
+            <dynatt:title>Miss</dynatt:title>
+            <dynatt:surname>Bouvier</dynatt:surname>
+            <dynatt:forename>Selma</dynatt:forename>
+            <dynatt:email>selma@simgles.com</dynatt:email>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_13">
+         <dynatt:lecturer>
+            <dynatt:surname>Brockman</dynatt:surname>
+            <dynatt:forename>Kent</dynatt:forename>
+            <dynatt:email>kent@channel6.com</dynatt:email>
+            <dynatt:worksfor>category[key='channel-6']</dynatt:worksfor>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_14">
+         <dynatt:lecturer>
+            <dynatt:surname>Krustofski</dynatt:surname>
+            <dynatt:forename>Herschel</dynatt:forename>
+            <dynatt:email>krusty@channel6.com</dynatt:email>
+            <dynatt:worksfor>category[key='channel-6']</dynatt:worksfor>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_15">
+         <dynatt:lecturer>
+            <dynatt:surname>Simpson</dynatt:surname>
+            <dynatt:forename>Abraham</dynatt:forename>
+            <dynatt:email>abe@retirement-castle.old</dynatt:email>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_16">
+         <dynatt:lecturer>
+            <dynatt:surname>Simpson</dynatt:surname>
+            <dynatt:forename>Lisa</dynatt:forename>
+            <dynatt:email>lisa@mensa.org</dynatt:email>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_17">
+         <dynatt:lecturer>
+            <dynatt:surname>Mann</dynatt:surname>
+            <dynatt:forename>Otto</dynatt:forename>
+            <dynatt:email>otto@elementary-springfield.edu</dynatt:email>
+            <dynatt:worksfor>category[key='elementary-springfield']</dynatt:worksfor>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+      <rapla:person id="resource_18">
+         <dynatt:lecturer>
+            <dynatt:surname>Szyslak</dynatt:surname>
+            <dynatt:forename>Moe</dynatt:forename>
+            <dynatt:email>lisa@moes-tavern.com</dynatt:email>
+         </dynatt:lecturer>
+         <rapla:permission/>
+      </rapla:person>
+
+   </rapla:resources>
+
+   <rapla:periods>
+      <rapla:period id="period_4" name="WS 2002/2003" start="2002-10-14" end="2003-02-05"/>
+      <rapla:period id="period_5" name="SS 2003" start="2003-04-07" end="2003-06-22"/>
+   </rapla:periods>
+
+   <rapla:reservations>
+      <rapla:reservation id="reservation_10" owner="user_3" created-at="2004-01-05" last-changed="2004-06-13">
+         <dynatt:lecture>
+            <dynatt:name>Duffs seminar</dynatt:name>
+            <dynatt:difficulty>category[key='too-easy']</dynatt:difficulty>
+         </dynatt:lecture>
+         <rapla:appointment start-date="2003-04-07" start-time="13:00:00" end-date="2003-04-07" end-time="16:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-09" start-time="13:00:00" end-date="2003-04-09" end-time="16:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_11"/>
+         <rapla:allocate idref="resource_18"/>
+         <rapla:allocate idref="resource_7"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_11" owner="user_3" created-at="2004-01-05" last-changed="2004-01-05">
+         <dynatt:meeting>
+            <dynatt:name>drinking at Moes</dynatt:name>
+            <dynatt:public>true</dynatt:public>
+         </dynatt:meeting>
+         <rapla:appointment start-date="2003-04-13" start-time="18:00:00" end-date="2003-04-13" end-time="22:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-09" start-time="18:00:00" end-date="2003-04-09" end-time="22:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_11"/>
+         <rapla:allocate idref="resource_18"/>
+         <rapla:allocate idref="resource_7"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_12" owner="user_4" created-at="2004-01-05" last-changed="2004-06-13">
+         <dynatt:lecture>
+            <dynatt:name>lesson for veterans</dynatt:name>
+            <dynatt:difficulty>category[key='too-boring']</dynatt:difficulty>
+         </dynatt:lecture>
+         <rapla:appointment start-date="2003-04-07" start-time="21:00:00" end-date="2003-04-08" end-time="00:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-09" start-time="21:00:00" end-date="2003-04-10" end-time="00:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+            <rapla:allocate idref="resource_2"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-10" start-time="16:00:00" end-date="2003-04-10" end-time="20:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+            <rapla:allocate idref="resource_6"/>
+            <rapla:allocate idref="resource_7"/>
+         </rapla:appointment>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_13" owner="user_5" created-at="2004-01-05" last-changed="2004-06-13">
+         <dynatt:lecture>
+            <dynatt:name>storys about the past</dynatt:name>
+            <dynatt:difficulty>category[key='too-boring']</dynatt:difficulty>
+         </dynatt:lecture>
+         <rapla:appointment start-date="2003-04-08" start-time="11:00:00" end-date="2003-04-08" end-time="15:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-10" start-time="11:00:00" end-date="2003-04-10" end-time="15:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_6"/>
+         <rapla:allocate idref="resource_2"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_14" owner="user_3" created-at="2004-01-05" last-changed="2004-06-13">
+         <dynatt:lecture>
+            <dynatt:name>brewing techniques</dynatt:name>
+            <dynatt:difficulty>category[key='too-hard']</dynatt:difficulty>
+         </dynatt:lecture>
+         <rapla:appointment start-date="2003-04-13" start-time="13:00:00" end-date="2003-04-13" end-time="17:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+            <rapla:allocate idref="resource_6"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-08" start-time="13:00:00" end-date="2003-04-08" end-time="15:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_11"/>
+         <rapla:allocate idref="resource_9"/>
+         <rapla:allocate idref="resource_18"/>
+         <rapla:allocate idref="resource_7"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_15" owner="user_1" created-at="2004-01-05" last-changed="2004-01-06">
+         <dynatt:meeting>
+            <dynatt:name>Itchy and Scratchy</dynatt:name>
+            <dynatt:public>true</dynatt:public>
+         </dynatt:meeting>
+         <rapla:appointment start-date="2003-04-09" start-time="14:00:00" end-date="2003-04-09" end-time="16:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-11" start-time="15:00:00" end-date="2003-04-11" end-time="17:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_16"/>
+         <rapla:allocate idref="resource_4"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_16" owner="user_3" created-at="2004-01-05" last-changed="2004-01-05">
+         <dynatt:meeting>
+            <dynatt:name>bowling</dynatt:name>
+            <dynatt:public>false</dynatt:public>
+         </dynatt:meeting>
+         <rapla:appointment start-date="2003-04-07" start-time="17:00:00" end-date="2003-04-07" end-time="20:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-12" start-time="17:00:00" end-date="2003-04-12" end-time="20:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_8"/>
+         <rapla:allocate idref="resource_2"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_17" owner="user_7" created-at="2004-01-05" last-changed="2004-01-05">
+         <dynatt:meeting>
+            <dynatt:name>jam session</dynatt:name>
+            <dynatt:public>true</dynatt:public>
+         </dynatt:meeting>
+         <rapla:appointment start-date="2003-04-09" start-time="16:00:00" end-date="2003-04-09" end-time="18:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_1"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_18" owner="user_7" created-at="2004-01-05" last-changed="2004-06-13">
+         <dynatt:lecture>
+            <dynatt:name>enviromental protection</dynatt:name>
+            <dynatt:difficulty>category[key='too-boring']</dynatt:difficulty>
+         </dynatt:lecture>
+         <rapla:appointment start-date="2003-04-09" start-time="12:15:00" end-date="2003-04-09" end-time="13:45:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+            <rapla:allocate idref="resource_2"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-04" start-time="13:30:00" end-date="2003-04-04" end-time="15:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+            <rapla:allocate idref="resource_1"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_8"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_19" owner="user_2" created-at="2004-01-05" last-changed="2004-06-13">
+         <dynatt:lecture>
+            <dynatt:name>power planting</dynatt:name>
+            <dynatt:difficulty>category[key='too-easy']</dynatt:difficulty>
+         </dynatt:lecture>
+         <rapla:appointment start-date="2003-04-12" start-time="15:00:00" end-date="2003-04-12" end-time="17:00:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2002-10-18" start-time="10:00:00" end-date="2002-10-18" end-time="12:00:00">
+            <rapla:repeating type="weekly" end-date="2003-02-05"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_9"/>
+         <rapla:allocate idref="resource_1"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_20" owner="user_4" created-at="2004-01-05" last-changed="2004-06-13">
+         <dynatt:lecture>
+            <dynatt:name>Han Tan Bantan</dynatt:name>
+            <dynatt:difficulty>category[key='too-boring']</dynatt:difficulty>
+         </dynatt:lecture>
+         <rapla:appointment start-date="2003-04-08" start-time="09:00:00" end-date="2003-04-08" end-time="10:45:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+            <rapla:allocate idref="resource_6"/>
+         </rapla:appointment>
+         <rapla:appointment start-date="2003-04-10" start-time="09:00:00" end-date="2003-04-10" end-time="10:45:00">
+            <rapla:repeating type="weekly" end-date="2003-06-22"/>
+         </rapla:appointment>
+         <rapla:allocate idref="resource_2"/>
+      </rapla:reservation>
+   </rapla:reservations>
+
+</rapla:data>

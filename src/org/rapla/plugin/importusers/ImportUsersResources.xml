@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--*- coding: utf-8 -*-->
+<!DOCTYPE resources SYSTEM "../../components/xmlbundle/resources.dtd">
+<resources default="en">
+  	<entry key="checklog">
+    	<text lang="en">{0} of {1} errors. Consult log file</text>
+    	<text lang="de">{0} von {1} Fehler. Consult Protokolldatei.</text>
+    	<text lang="fr">{0} sur {1} erreurs. Consultez le fichier journal.</text>
+    	<text lang="es">{0} de {1} errores. Consulte el archivo de registro.</text>
+    	<text lang="cs">{0} z {1} chyb. Konzultovat log souboru.</text>
+    	<text lang="nl">{0} op {1} fouten. Raadpleeg logbestand.</text>
+  	</entry>
+</resources>

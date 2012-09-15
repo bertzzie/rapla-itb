@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?><!--*- coding: utf-8 -*--> 
+<!DOCTYPE resources SYSTEM "../../components/xmlbundle/resources.dtd">
+<resources default="en">
+
+  <entry key="icon.error">
+    <icon src="images/error.png"/>
+  </entry>
+  <entry key="icon.new">
+	<icon src="images/eclipse-icons/new.gif"/>
+  </entry>
+  <entry key="icon.edit">
+	<icon src="images/eclipse-icons/edit.gif"/>
+  </entry>
+  <entry key="icon.delete">
+	<icon src="images/eclipse-icons/trash.gif"/>
+  </entry>
+  <entry key="icon.help">
+	<icon src="images/eclipse-icons/help.gif"/>
+  </entry>
+	<entry key="icon.archive">
+		<icon src="images/archive.gif"/>
+	</entry>
+	<entry key="icon.no_perm">
+		<icon src="gui/images/eclipse-icons/no_perm.gif"/>
+	</entry>
+ 
+  <entry key="occupation">
+    <text lang="en">Occupation</text>
+   	<text lang="de">Besetzung</text>
+   	<text lang="fr">l''Occupation</text>
+    <text lang="es">Ocupación</text>
+    <text lang="cs">Obsazenost</text>
+    <text lang="nl">Bezetting</text>
+   	<text lang="pl">Zawód</text>
+  </entry>
+  <entry key="horizon">
+    <text lang="en">Month +</text>
+    <text lang="de">Monat +</text>
+    <text lang="fr">Mois + </text>
+    <text lang="es">...: </text>
+    <text lang="cs">...: </text> 
+    <text lang="nl">Maand +</text>   
+  </entry>
+  <entry key="firstFit">
+    <text lang="en">First fit</text>
+    <text lang="de">...: </text>
+    <text lang="fr">Premier libre</text>
+    <text lang="es">...: </text>
+    <text lang="cs">...: </text> 
+    <text lang="nl">Eerst vrij</text>   
+  </entry>
+  <entry key="bestFit">
+    <text lang="en">Best fit</text>
+    <text lang="de">...: </text>
+    <text lang="fr">Mellieur libre</text>
+    <text lang="es">...: </text>
+    <text lang="cs">...: </text> 
+    <text lang="nl">Beste vrij</text>   
+  </entry>
+  <entry key="freeSlot">
+    <text lang="en">Free slot: </text>
+    <text lang="de">Frei: </text>
+    <text lang="fr">Libre:</text>
+    <text lang="es">...: </text>
+    <text lang="cs">...: </text> 
+    <text lang="nl">Vrij: </text>   
+  </entry>
+  <entry key="slotGaps">
+    <text lang="en">#Gaps</text>
+    <text lang="de">...: </text>
+    <text lang="fr">#Gaps</text>
+    <text lang="es">...: </text>
+    <text lang="cs">...: </text> 
+    <text lang="nl">#Gaps</text>   
+  </entry>
+  <entry key="forbidden">
+    <text lang="en">Resource not availabe.</text>
+    <text lang="de">...: </text>
+    <text lang="fr">Resource pas disponible."</text>
+    <text lang="es">...: </text>
+    <text lang="cs">...: </text> 
+    <text lang="nl">Materiaal niet beschikbaar.</text>   
+  </entry>
+  <entry key="minus1month">
+    <text lang="en">-1 Month</text>
+    <text lang="de">-1 Monate</text>
+    <text lang="fr">-1 Mois"</text>
+    <text lang="es">-1</text>
+    <text lang="cs">-1</text> 
+    <text lang="nl">-1 Maand</text>   
+  </entry>
+  <entry key="plus1month">
+    <text lang="en">+1 Month</text>
+    <text lang="de">+1 Monate</text>
+    <text lang="fr">+1 Mois"</text>
+    <text lang="es">+1</text>
+    <text lang="cs">+1</text> 
+    <text lang="nl">+1 Maand</text>   
+  </entry>
+  <entry key="event_check">
+	<text lang="en">Remarks</text>
+	<text lang="de">...</text>
+	<text lang="fr">...</text>
+	<text lang="es">...</text>
+	<text lang="nl">Opmerking</text>
+ </entry>  
+ <entry key="resources_persons">
+    <text lang="en">Resources/persons</text>
+    <text lang="de">Ressourcen/Personen</text>
+    <text lang="fr">Ressources/Personnes</text>
+    <text lang="es">Recursos/personas</text>
+    <text lang="cs">Prostředky/osoby</text>
+    <text lang="nl">Persoon/Materiaal</text>
+ </entry>  
+ <entry key="daysin">
+    <text lang="en">In</text>
+    <text lang="de">Ein</text>
+    <text lang="fr">Entrée</text>
+    <text lang="es">Entrada</text>
+    <text lang="cs">Vstupní</text>
+    <text lang="nl">In</text>
+ </entry> 
+ <entry key="daysout">
+    <text lang="en">In</text>
+    <text lang="de">Aus</text>
+    <text lang="fr">Sortie</text>
+    <text lang="es">Salida</text>
+    <text lang="cs">Výstupní</text>
+    <text lang="nl">Uit</text>
+ </entry> 
+ <entry key="archive_gt">
+    <text lang="en">Archive {0} &gt;= {1} days inactive</text>
+    <text lang="de">Archiv {0} &gt;= {1} Tage inaktiv</text>
+    <text lang="fr">Archive {0} &gt;= {1} jours inactifs</text>
+    <text lang="es">pArchivo {0} &gt;= {1} día inactivos</text>
+    <text lang="cs">Archiv {0} &gt;= {1} dnů neaktivní</text>
+    <text lang="nl">Archiveer {0} &gt;= {1} dagen inactief</text>
+ </entry> 
+ <entry key="forcearchive_lt">
+    <text lang="en">Archive {0} &lt; {1} days inactive</text>
+    <text lang="de">Archiv {0} &lt; {1} Tage inaktiv</text>
+    <text lang="fr">Archive {0} &lt; {1} jours inactifs</text>
+    <text lang="es">Archivo {0} &lt; {1} día inactivos</text>
+    <text lang="cs">Archiv {0} &lt; {1} dnů neaktivní</text>
+    <text lang="nl">Archiveer {0} &lt; {1} dagen inactief</text>
+ </entry> 
+  <entry key="archive_yn">
+    <text lang="en">Archive</text>
+    <text lang="de">Archiv</text>
+    <text lang="fr">Archive</text>
+    <text lang="es">pArchivo</text>
+    <text lang="cs">Archiv</text>
+    <text lang="nl">Archiveer</text>
+ </entry> 
+ <entry key="noendoflife">
+    <text lang="en">_endoflive not defined.</text>
+    <text lang="de">_endoflive nicht definiert.</text>
+    <text lang="fr">_endoflive pas défini.</text>
+    <text lang="es">_endoflive no se define.</text>
+    <text lang="cs">_endoflive není definováno.</text>
+    <text lang="nl">_endoflife niet gedefinieerd.</text>
+ </entry>
+ <entry key="confirm">
+    <text lang="en">Confirm. Archive on {0}.</text>
+    <text lang="de">Bestätigen. Archiv auf {0).</text>
+    <text lang="fr">Confirmer. Archives le {0}.)</text>
+    <text lang="es">Confirmar. Archivo de {0}.</text>
+    <text lang="cs">Potvrdit. Archivu na {0}.</text>
+    <text lang="nl">Bevestig: Archiveer op {0}.</text>
+ </entry>
+ <entry key="resourcedeleted">
+    <text lang="en">Deleted</text>
+    <text lang="de">Gelöscht</text>
+    <text lang="fr">Supprimé</text>
+    <text lang="es">Eliminado</text>
+    <text lang="cs">vypouští</text>
+    <text lang="nl">Geschrapt</text>
+ </entry>
+ <entry key="startday">
+    <text lang="en">Starting day of the month</text>
+    <text lang="de">Ab Tag des Monats</text>
+    <text lang="fr">A partir du jour du mois</text>
+    <text lang="es">Días a partir del mes</text>
+    <text lang="cs">První den v měsíci</text>
+    <text lang="nl">Start dag van de maand</text>  
+    <text lang="pl">Począwszy od dnia miesiąca</text>      
+ </entry>
+ <entry key="FirstDay">
+    <text lang="en">Day 1 of month</text>
+    <text lang="de">Tag 1 des Monats</text>
+    <text lang="fr">Jour 1 du mois</text>
+    <text lang="es">El día 1 del mes</text>
+    <text lang="cs">Den 1 měsíce</text>
+    <text lang="nl">Dag 1 van maand</text>  
+    <text lang="pl">Dzień 1 miesiąca</text>      
+ </entry>
+ <entry key="ToDay">
+    <text lang="en">Today</text>
+    <text lang="de">Heute</text>
+    <text lang="fr">Aujourd'hui</text>
+    <text lang="es">Hoy</text>
+    <text lang="cs">Dnes</text>
+    <text lang="nl">Vandaag</text>
+    <text lang="pl">Dzisiaj</text>    
+ </entry>
+     <entry key="options.timeshift">
+        <text lang="en">Options</text>
+        <text lang="de">Einstellungen</text>
+        <text lang="fr">Options</text>
+        <text lang="es">Opciones</text>
+        <text lang="cs">Volby</text>
+        <text lang="nl">Voorkeur</text>
+    </entry>
+    <entry key="permission.denied">
+        <text lang="en">Denied</text>
+        <text lang="de">Gesperrt</text>
+        <text lang="fr">Interdit</text>
+        <text lang="es">Denegado</text>
+        <text lang="cs">Zamítnuto</text>
+        <text lang="nl">Geen toegang</text>
+    </entry>
+</resources>

@@ -1,0 +1,14 @@
+# You can modify this settings to configure the build
+
+#Set the target that will be run by default
+target=dist-bin
+
+#Class for starting rapla when using the "start" target
+#start.class=org.rapla.Main
+
+#Class for testing rapla when using the "test" target
+#test.class=org.rapla.entities.PreferencesTest
+
+#Path and password to the keystore used for signing
+#keystore.file=testkeystore
+#keystore.password=secret

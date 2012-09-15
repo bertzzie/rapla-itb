@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--*- coding: utf-8 -*-->
+<!DOCTYPE resources SYSTEM "../../components/xmlbundle/resources.dtd">
+<resources default="en">
+	<entry key="export_file_text">
+		<text lang="en">Export view to iCal file</text>
+		<text lang="de">Exportiere Ansicht in iCal File</text>
+		<text lang="fr">Exporte la vue en iCal File</text>
+	</entry>
+	<entry key="export_ical_text">
+		<text lang="en">Publish calendar to iCal</text>
+		<text lang="de">Veröffentliche Kalender nach iCal</text>
+		<text lang="fr">Publier le calendrier en iCal</text>
+    <text lang="es">Publicar el calendario en iCal</text>
+	</entry>
+	<entry key="previous_days_text">
+		<text lang="en">previous days:</text>
+		<text lang="de">vorhergehende Tage:</text>
+		<text lang="fr">les jours précédents:</text>
+	</entry>
+	<entry key="subsequent_days_text">
+		<text lang="en">subsequent days:</text>
+		<text lang="de">darauffolgende Tage:</text>
+		<text lang="fr">les jours suivants:</text>
+	</entry>
+	<entry key="user_interval_setting_text">
+		<text lang="en">User interval setting:</text>
+		<text lang="de">Benutzerspezifische Intervalleinstellung:</text>
+		<text lang="fr">le paramètre d`intervalle utilisateur spécifique:</text>
+	</entry>
+	<entry key="created_succesfully_text">
+		<text lang="en">Successfully created.</text>
+		<text lang="de">Erfolgreich angelegt.</text>
+		<text lang="fr">Créé avec succès.</text>
+	</entry>
+	<entry key="save_title_text">
+		<text lang="en">Save iCal view</text>
+		<text lang="de">Ansicht als iCal speichern</text>
+		<text lang="fr">Enregistrer la vue iCal</text>
+	</entry>
+	<entry key="export_text">
+		<text lang="en">Export</text>
+		<text lang="de">Exportieren</text>
+		<text lang="fr">Exporter</text>
+	</entry>
+	<entry key="cancel_text">
+		<text lang="en">Cancel</text>
+		<text lang="de">Abbrechen</text>
+		<text lang="fr">Annuler</text>
+	</entry>
+	<entry key="ical_view_name_text">
+		<text lang="en">iCal view name:</text>
+		<text lang="de">Name der iCal Ansicht:</text>
+		<text lang="fr">Nom de la vue iCal:</text>
+	</entry>
+	<entry key="available_ical_views_text">
+		<text lang="en">Available iCal views:</text>
+		<text lang="de">Verfügbare iCal Ansichten:</text>
+		<text lang="fr">Les vues iCal disponibles:</text>
+	</entry>
+	<entry key="available_autoexport_views_text">
+		<text lang="en">Available views based on html export:</text>
+		<text lang="de">Verfügbare Ansichten basierend auf HTML Export:</text>
+		<text lang="fr">Les vues disponibles à la base d`HTML Export:</text>
+	</entry>
+	<entry key="delete_text">
+		<text lang="en">Delete</text>
+		<text lang="de">Löschen</text>
+		<text lang="fr">Effacer</text>
+	</entry>
+	<entry key="no_dates_text">
+		<text lang="en">No dates available in the current view.</text>
+		<text lang="de">In der aktuellen Ansicht sind keine Termine vorhanden.</text>
+		<text lang="fr">Pas de dates disponibles dans la vue en cours.</text>
+	</entry>
+	<entry key="no_name_text">
+		<text lang="en">No name is given.</text>
+		<text lang="de">Kein Name gesetzt.</text>
+		<text lang="fr">Aucun nom n'est donné.</text>
+	</entry>
+	<entry key="export_file_succesfull_text">
+		<text lang="en">The iCal file has been successfully created.</text>
+		<text lang="de">Die iCal Datei wurde erfolgreich erstellt.</text>
+		<text lang="fr">Le fichier iCal a été créé avec succès.</text>
+	</entry>
+	<entry key="use_user_interval_setting_text">
+		<text lang="en">use user interval setting</text>
+		<text lang="de">benutzerspezifische Intervalleinstellung verwenden</text>
+		<text lang="fr">utiliser le paramètre d`intervalle utilisateur spécifique:</text>
+	</entry>
+</resources>

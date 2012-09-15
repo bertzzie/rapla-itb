@@ -1,0 +1,36 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<!-- Configuration file for the rapla-client -->
+<rapla-config>
+  <!-- Use this to customize the rapla resources
+  <default-bundle>org.rapla.MyResources</default-bundle>
+  -->
+  <locale>
+     <!-- If languages default attribute is not set, the system default wil be used. -->
+     <languages default="">
+       <language>de</language>
+       <language>en</language>
+       <language>fr</language>
+       <language>es</language>
+       <language>zh</language>
+       <language>cs</language>
+       <language>nl</language>
+       <language>pl</language>
+     </languages>
+     <!-- Country code in UPPER-CASE. If not set, the system default will be used. Example: US -->
+     <country></country>
+  </locale>
+
+  <rapla-client id="client"/>
+
+  <facade id="facade">
+    <store>remote</store>
+  </facade>
+
+  <remote-storage id="remote">
+    <!-- If you do not start from webstart or applet replace ${download-url} 
+    with a hardcoded url to your server like http://myhost:8051/
+    -->
+    <server>${download-url}</server>
+  </remote-storage>
+
+</rapla-config>

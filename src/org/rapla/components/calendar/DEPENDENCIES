@@ -1,0 +1,7 @@
+This component depends on the following packages (including subpackages):
+java.*
+javax.swing.*
+
+If you want to compile with  JDK 1.3 or lower please exclude 
+the class jdk14adapter.AWTAdapterFacotryImpl.
+Requires at least jdk1.2

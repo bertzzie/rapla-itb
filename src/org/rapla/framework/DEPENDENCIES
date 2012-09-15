@@ -1,0 +1,4 @@
+This component depends on the following packages
+
+org.apache.avalon.framework.*
+org.rapla.components.util.*

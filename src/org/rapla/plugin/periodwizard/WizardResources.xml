@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?><!--*- coding: utf-8 -*-->
+<!DOCTYPE resources SYSTEM "../../components/xmlbundle/resources.dtd">
+<resources default="en">
+  <!-- Reservations -->
+  <entry key="reservation.create_with_default_wizard">
+    <text lang="en">Weekly event in a period</text>
+    <text lang="de">Wöchentliche Veranstaltung in einem Zeitraum</text>
+    <text lang="fr">Évènement hebdomadaire pendant toute une période</text>
+    <text lang="es">Evento semanal durante todo un periodo</text>
+    <text lang="nl">Activiteit (Periode wekelijks)</text>
+  </entry>
+  <!-- default-reservation-wizard  -->
+  <entry key="reservation_wizard.title">
+   <text lang="en">Wizard for regular events</text>
+   <text lang="de">Assistent zum Anlegen einer regelmäßigen Veranstaltung</text>
+   <text lang="fr">Assistant de création d'évènement hebdomadaire</text>
+   <text lang="es">Asistente de creación de eventos semanales</text>
+   <text lang="nl">Assistent: Activiteit (Periode)</text>
+  </entry>
+  <entry key="error.no_period_found">
+   <text lang="en">
+     No periods found. Please enter the periods which you want to use for planning first. You'll need to login as admin for this.
+   </text>
+   <text lang="de">
+     Keine Zeiträume gefunden. Bitte geben Sie zuerst die Zeiträume ein, für die Sie planen möchten. Sie müssen sich hierfür als admin einloggen.
+   </text>
+   <text lang="fr">Pas de période. Commencez par définir des périodes dans l'année. Vous avez besoin de vous connecter comme 'admin' pour le faire</text>
+   <text lang="es">No existen periodos. Comience por definir los periodos del año que se usarán en las planificaciones. Para ello, necesitará conectarse como usuario admin.</text>
+   <text lang="nl">Geen periode gevonden. Eerst een periode toevoegen. Contacteer de systeem beheerder.</text>
+  </entry>
+  <entry key="warning.need_resource_or_person">
+   <text lang="en">
+     You have to mark at least one resource or person
+     to search for a free appointment!
+   </text>
+   <text lang="de">
+     Sie müssen mindestens eine Ressource oder Person
+     für die Sie den freien Termin suchen markieren!
+   </text>
+   <text lang="fr">Vous devez au moins sélectionner une resource ou personne pour laquelle (ou lesquelles) vous voulez rechercher un crénau possible</text>
+   <text lang="es">¡Debe seleccionar al menos un recurso o persona para el cual (o los cuales) desea buscar una cita disponible!</text>
+   <text lang="nl">Tenminste één middel of persoon selecteren!</text>
+  </entry>
+  <entry key="reservation_wizard.panel1">
+   <text lang="en">
+     <strong>Create a regular event:</strong><br/>
+     <br/>
+     <strong>1.</strong> Select a period.<br/>
+     <br/>
+     <strong>2.</strong> Choose a event-type.<br/>
+     <br/>
+     <strong>3.</strong> Enter the event information.<br/>
+     <br/>
+     <strong>4.</strong> Proceed to the appointments-menu.<br/>
+   </text>
+   <text lang="de">
+     <strong>Anlegen einer regelmäßigen Veranstaltung:</strong><br/>
+     <br/>
+     <strong>1.</strong> Zeitraum in dem die Reservierung stattfindet auswählen.<br/>
+     <br/>
+     <strong>2.</strong> Veranstaltungstyp auswählen.<br/>
+     <br/>
+     <strong>3.</strong> Eingabe der Veranstaltungsdaten.<br/>
+     <br/>
+     <strong>4.</strong> Weiter zur Termineingabe.<br/>
+  </text>
+  <text lang="fr">
+     <strong>Création d'évènement hebdomadaire</strong><br/>
+     <br/>
+     <strong>1.</strong> Choisissez la période de l'année.<br/>
+     <br/>
+     <strong>2.</strong> Choisissez le type de l'évènement.<br/>
+     <br/>
+     <strong>3.</strong> Entrez les informations concernant l'évènement.<br/>
+     <br/>
+     <strong>4.</strong> Passez à la fenêtre de définition des crénaux.<br/>
+  </text>
+   <text lang="es">
+     <strong>Creación de eventos semanales:</strong><br/>
+     <br/>
+     <strong>1.</strong> Seleccione el periodo del año.<br/>
+     <br/>
+     <strong>2.</strong> Escoja el tipo de evento.<br/>
+     <br/>
+     <strong>3.</strong> Introduzca la información del evento.<br/>
+     <br/>
+     <strong>4.</strong> Pase a la ventana de creación de citas.<br/>
+   </text>
+   <text lang="nl">
+     <strong>Plannen van een activiteit:</strong><br/>
+     <br/>
+     <strong>1.</strong> Kies een periode.<br/>
+     <br/>
+     <strong>2.</strong> Kies een type activiteit.<br/>
+     <br/>
+     <strong>3.</strong> Geef de activiteit een label.<br/>
+     <br/>
+     <strong>4.</strong> Volgende.<br/>
+   </text>
+  </entry>
+  <entry key="reservation_wizard.panel2">
+   <text lang="en">
+     <strong>Enter known appointments:</strong><br/>
+     Fill in the day of the week and the time of the appointments.<br/>
+     <br/>
+     <strong>Search for free appointments:</strong><br/>
+     Mark the resource or persons for which you are searching a free appointment in
+     the left table and press &quot;Search free appointment&quot;.<br/>
+     <br/>
+     <strong>Selecting resources and persons:</strong><br/>
+     Mark the persons and resources you want in the left table.
+     Double-click to add them to the right table and to assign them
+     to all entered appointments. If you want to assign a
+     resource or person to a particular appointment, click in the
+     right column next to the corresponding entry in the right table.
+   </text>
+   <text lang="de">
+     <strong>Eingabe von bekannten Terminen:</strong><br/>
+     Geben Sie den Wochentag und die Uhrzeit der Termine ein.<br/>
+     <br/>
+     <strong>Suche nach freien Terminen:</strong><br/>
+     Markieren Sie die Ressourcen oder Personen für die Sie einen freien Termin suchen
+     in der linken Tabelle und drücken Sie auf &quot;Freien Termin suchen&quot;.<br/>
+     <br/>
+     <strong>Auswählen von Ressourcen und Personen:</strong><br/>
+     Markieren Sie die gewünschten Personen und Ressourcen in der linken Tabelle.
+     Mit einen Doppelklick werden die Einträge in die rechte Tabelle übernommen und
+     allen eingegebenen Termine zugewiesen. Wenn Sie eine
+     Ressource oder Person nur einem bestimmten Termin zuweisen wollen, klicken Sie
+     in die rechte Spalte neben dem entsprechenden Eintrag in der rechten Tabelle.
+   </text>
+   <text lang="fr">
+     <strong>Indiquer les crénaux que vous connaissez :</strong><br/>
+     Indiquez le jour de la semaine et l'heure de début et de fin du crénau.<br/>
+     <br/>
+     <strong>Chercher des crénaux libres :</strong><br/>
+     Sélectionnez dans la table de gauche
+     les ressources et personnes pour lesquelles vous
+     voulez rechercher un crénau libre.
+     Puis cliquez sur &quot;Chercher un crénau libre&quot;.<br/>
+     <br/>
+     <strong>Selectionner les ressources et personnes :</strong><br/>
+     Sélectionnez dans la table de gauche
+     les ressources et personnes puis cliquez sur &quot;Insérer&quot;
+     Elle seront assignées pour tous les crénaux.
+     Pour assigner une ressource ou personne à des crénaux
+     particuliers, cliquez sur le bouton à coté de la ressource
+     ou personne dans la table de droite.
+   </text>
+   <text lang="es">
+     <strong>Introduzca las citas que conoce:</strong><br/>
+     Indique el día de la semana y la hora de inicio y de fin de la cita.<br/>
+     <br/>
+     <strong>Búsqueda de citas disponibles:</strong><br/>
+     Seleccione en la tabla de la izquierda
+     los recursos y las personas para los cuales
+     desee buscar una cita disponible
+     y pulse sobre &quot;Buscar una cita disponible&quot;.<br/>
+     <br/>
+     <strong>Seleccione los recursos y las personas:</strong><br/>
+     Seleccione en la tabla de la izquierda
+     los recursos y las personas y pulse el botón &quot;Añadir&quot;.
+     Se añadirán para todas las citas.
+     Para asignar un recurso o persona a una cita
+     particular, pulse sobre el botón que aparece a continuación
+     del recurso o persona en la tabla de la derecha.
+   </text>
+   <text lang="nl">
+     <strong>1. Plan een activiteit: </strong><br/>
+     Geef de dag van de week en tijd.<br/>
+     <strong>of</strong><br/>
+     zoek een vrije plaats; selecteer de middelen in de linkerlijst en <strong>Zoek</strong>.<br/>
+<br/><strong>2. Selecteer de middelen:</strong><br/>
+     Selecteer de middelen in de linkerlijst en <strong>Voeg toe</strong>.<br/><br/>
+     Als je een middel enkel aan één activiteit
+     wil toewijzen selecteer deze in de rechterlijst naast de naam.<br/>
+<br/><strong>3. Sla op.</strong>
+   </text>
+  </entry>
+  <entry key="reservation_wizard.panel3">
+   <text lang="en">
+     <strong>Search for appointments:</strong><br/>
+     Select with your mouse a free appointment in the wee kview.
+     Click &quot;Add Appointment&quot; to create the appointment
+     and return to the previous menu.
+     <br/>
+     <br/>
+     There you can assign the resource or person to the appointment.
+   </text>
+   <text lang="de">
+     <strong>Terminsuche:</strong><br/>
+     Wählen Sie mit der Maus ein freies Zeitfenster in der Wochenansicht aus.
+     Drücken Sie &quot;Termin hinzufügen&quot;, um den Termin anzulegen und zum
+     vorherigen Menü zurückzukehren. <br/>
+     <br/>
+     Sie können dort die gewünschte Ressource oder Person dem Termin zuweisen.
+   </text>
+   <text lang="fr">
+     <strong>Chercher des crénaux :</strong><br/>
+     Sélectionnez avec la souris un crénau libre
+     dans la semaine.
+     Cliquez sur &quot;Ajouter crénaux&quot; pour
+     ajouter le crénaux et revenir sur la fenêtre précédente.
+     <br/>
+     Ainsi vous pouvez assigner la ressource ou la personne
+     aux crénaux en cliquant sur 'insérer'
+   </text>
+   <text lang="es">
+     <strong>Búsqueda de citas :</strong><br/>
+     Seleccione con el ratón una cita disponible durante la semana.
+     Pulse &quot;Añadir cita&quot; para añadir la cita
+     y volver a la ventana previa.
+     <br/>
+     <br/>
+     Allí podrá asignar recursos o personas a la cita.
+   </text>
+   <text lang="nl">
+     <strong>Zoek:</strong><br/><br/>
+     Selecteer met de muis de tijd in het weekoverzicht.;<br/>
+     <br/>
+     <strong>Toevoegen</strong> om te bevestigen.
+   </text>
+  </entry>
+  <entry key="reservation_wizard.search_free_appointment">
+   <text lang="en">Search for a free appointment</text>
+   <text lang="de">Freien Termin suchen</text>
+   <text lang="fr">Chercher un crénau libre</text>
+   <text lang="es">Buscar una cita disponible</text>
+   <text lang="nl">Zoek</text>
+  </entry>
+  <entry key="reservation_wizard.appointment_menu">
+   <text lang="en">Appointment Menu</text>
+   <text lang="de">Termineingabe</text>
+   <text lang="fr">Création des crénaux</text>
+   <text lang="es">Creación de citas</text>
+   <text lang="nl">Volgende</text>
+   
+  </entry>
+  <entry key="reservation_wizard.add_appointment">
+   <text lang="en">Add Appointment</text>
+   <text lang="de">Termin hinzufügen</text>
+   <text lang="fr">Ajouter un crénau</text>
+   <text lang="es">Añadir cita</text>
+   <text lang="nl">Toevoegen</text>
+  </entry>
+  <entry key="enter_appointments">
+   <text lang="en">Enter appointments:</text>
+   <text lang="de">Eingabe der Termine:</text>
+   <text lang="fr">Ajouter des crénaux :</text>
+   <text lang="es">Introducción de citas :</text>
+   <text lang="nl">Toevoegen activiteiten:</text>
+  </entry>
+  <entry key="select_persons_and_resources">
+   <text lang="en">Select resources and persons:</text>
+   <text lang="de">Auswählen von Ressourcen und Personen:</text>
+   <text lang="fr">Sélection des ressources et personnes :</text>
+   <text lang="es">Selección de recursos y personas :</text>
+   <text lang="nl">Toewijzingen:</text>
+  </entry>
+  <entry key="reservation_wizard.weekview">
+   <text lang="en">{0}: {1}</text>
+   <text lang="de">{0}: {1}</text>
+   <text lang="fr">{0}: {1}</text>
+   <text lang="es">{0}: {1}</text>
+   <text lang="nl">{0}: {1}</text>
+  </entry>
+</resources>

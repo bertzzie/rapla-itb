@@ -1,0 +1,21 @@
+The Rapla project uses the following Libraries from other free-software-projects:
+
+Library:------------------from:-------------------Get the source from:-----------
+
+ant.jar                     Apache Software Found.  ant.apache.org
+optional.jar
+
+avalon-framework-4.2.0.jar  Apache Software Found.  avalon.apache.org
+avalon-loggin.jar           Apache Software Found.  avalon.apache.org
+
+junit.jar                   -                       www.junit.org
+
+jetty*.jar                  Eclipse Foundation      http://www.eclipse.org/jetty/
+javax.servlet.jar           Sun API
+itext*.jar                  http://itextpdf.com/
+ical4j*.jar                 Micronode http://build.mnode.org/projects/ical4j/                     
+
+Most icons were taken from the eclipse project (www.eclipse.org)
+Some icons were taken from
+- ximian evolution www.ximian.org
+- http://wm-icons.sourceforge.net/

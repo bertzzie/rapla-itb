@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test-src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/junit-3.8.jar" sourcepath="C:/Users/ckohlhaas/.m2/repository/junit/junit/3.8.1/junit-3.8.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/common/avalon-framework-4.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/common/picollo.jar"/>
+	<classpathentry kind="lib" path="lib/server/avalon-logging.jar"/>
+	<classpathentry kind="lib" path="lib/test-only/hsqldb.jar"/>
+	<classpathentry kind="lib" path="lib/server/backport-util-concurrent-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/server/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/server/commons-codec-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/server/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="lib/server/mailapi.jar"/>
+	<classpathentry kind="lib" path="lib/server/smtp.jar"/>
+	<classpathentry kind="lib" path="lib/common/iText-4.2.0-com.itextpdf.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-continuation-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-security-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-server-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-servlet-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-webapp-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-xml-7.6.5.v20120716.jar"/>
+	<classpathentry kind="lib" path="lib/server/ical4j-1.0.3.jar" sourcepath="C:/Users/christopher/.m2/repository/org/mnode/ical4j/ical4j/1.0.3/ical4j-1.0.3-sources.jar"/>
+	<classpathentry kind="output" path="eclipse-build"/>
+</classpath>

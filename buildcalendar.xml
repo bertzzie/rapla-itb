@@ -1,0 +1,217 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<!-- Rapla build-file
+Copyright (C) 2001-2003 Christopher Kohlhaas                                  
+                                                                         
+This programm is free software; you can redistribute it and/or modify    
+it under the terns of the GNU General Public License as published by the 
+Free Software Foundation. A copy of the license has been included with   
+these distribution in the COPYING file, if not go to www.fsf.org .       
+
+As a special exception, you are granted the permission to link this   
+program with every library, of wich license fullfills the Open Source  
+Definition as published by the Open Source Initiative (OSI).           
+-->
+
+<project name="Rapla" default="build" basedir=".">
+  <!-- set global properties for this build -->
+  <property name="build.compiler.emacs" value="on"/>
+  <property name="build.compiler.warnings" value="true"/>
+  <property name="build.compiler.pedantic" value="true"/>
+  <property name="build.compiler.depend" value="true"/>
+  <property name="build.compiler.fulldepend" value="true"/>
+  <property name="target" value="dist-bin"/>
+
+  <!-- This is for the crlf-fix -->
+  <patternset id="text-files" >
+     <include name="**"/>
+     <exclude name="**/*.class"/>
+     <exclude name="**/*.jar"/>
+     <exclude name="**/*.war"/>
+     <exclude name="**/*.ear"/>
+     <exclude name="**/*.zip"/>
+     <exclude name="**/*.tar.gz"/>
+     <exclude name="**/*.gz"/>
+     <exclude name="**/*.gif"/>
+     <exclude name="**/*.png"/>
+     <exclude name="**/*.jpg"/>
+     <exclude name="**/*.jpeg"/>
+  </patternset>
+
+  <property name="main.dir" value="${basedir}" />  
+
+  <target name="init">
+
+    <condition property="newjdk">
+      <and>
+        <available classname="java.awt.event.MouseWheelListener"/>
+      </and>
+    </condition>
+
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <property name="doc.properties" value="doc-calendar.properties"/>
+    <property file="${main.dir}/${build.properties}"/>
+    <property file="${main.dir}/${doc.properties}"/>
+
+
+    <!-- Information about the compiler -->
+    <!-- property name="build.compiler" value="javac1.3"/-->
+    <property name="debug"          value="on"/>
+    <property name="optimize"       value="off"/>
+    <property name="deprecation"    value="on"/>
+    <property name="verbose"        value="no"/>
+    <property name="packages"       value="org.*"/>
+
+    <!-- The rapla-directories -->
+    <property name="doc.dir" value="${main.dir}/xdocs" />
+    <property name="src.dir" value="${main.dir}/src/" />
+    <property name="build.dir" value="${main.dir}/build" />
+    <property name="dist.dir" value="${main.dir}/dist" />
+    <property name="tarball.name" value="calendar-${doc.version}"/>
+    <property name="dist-calendar.dir" value="${main.dir}/dist/${tarball.name}" />
+    <property name="build.src" value="${build.dir}/src" />
+    <property name="testsrc.dir" value="${main.dir}/test-src"/>
+    <property name="package.path" value="org/rapla/components/calendar/"/>
+    <property name="build.javadocs" value="javadocs"/>
+
+    <property name="build.dest" value="${build.dir}/classes" />
+    <property name="build.test" value="${build.dir}/test/classes" />
+
+    <property name="main.lib" value="calendar.jar" />
+    <!-- The class and properties file to start rapla from the command-line. 
+	 This poperties are necessary for the start scripts-->
+    <property name="start.class" value="org.rapla.components.calendar.RaplaCalendarExample"/>
+  </target>
+
+ <!-- =================================================================== -->
+ <!--   The Targets prepare,compile,compile-resources and build are for   -->
+ <!--   creating the ${main.lib}                                            -->
+ <!-- =================================================================== -->
+  <target name="prepare" depends="init"> 
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${build.dest}" />
+    <mkdir dir="${build.test}" />
+  </target>
+
+  <target name="compile" depends="prepare">
+    <!-- Compile the java code from ${src} into ${build.dir} -->
+    <javac srcdir="${src.dir}" 
+           destdir="${build.dest}" 
+           debug="${debug}"
+           optimize="${optimize}"
+           deprecation="${deprecation}"
+	              verbose="${verbose}">
+        <include name="${package.path}/*" />
+        <exclude name="${package.path}/jdk14adapter/AWTAdapterFactoryImpl.java" unless="newjdk"/>
+    </javac>
+    <javac srcdir="${testsrc.dir}" 
+           destdir="${build.test}" 
+           debug="${debug}"
+           optimize="${optimize}"
+	   verbose="${verbose}">
+        <classpath>
+          <pathelement path="${build.dest}" />
+        </classpath>
+        <include name="${package.path}/**" />
+    </javac>
+  </target>
+
+
+  <target name="build" depends="compile"
+    description="Build a new calendar.jar in the build folder">
+    <mkdir dir="${build.src}"/>
+    <uptodate property="manifest.needupdate">
+       <srcfiles dir="${build.src}" includes="Manifest.mf"/>
+       <mapper type="merge" to="${main.dir}/${build.properties}"/>
+    </uptodate>
+    <delete>
+       <fileset dir="${build.src}">
+         <include name="Manifest.mf" if="manifest.needupdate"/>
+       </fileset>
+    </delete>
+
+    <copy tofile="${build.src}/Manifest.mf" file="${src.dir}/manifest">
+      <filterset>
+        <filter token="libraries_jar_manifest" value=""/>
+        <filter token="start_class" value="${start.class}"/>
+      </filterset>
+    </copy>
+
+    <jar jarfile="${build.dir}/${main.lib}"
+         manifest="${build.src}/Manifest.mf"
+	 >          
+        <fileset dir="${build.dest}"> 
+           <include name="${package.path}/**" />
+        </fileset>
+        <fileset dir="${build.test}"> 
+           <include name="${package.path}/**" />
+        </fileset>
+    </jar> 
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Creates the API documentation                                       -->
+  <!-- =================================================================== -->
+  <target name="javadocs" depends="prepare"
+      unless="javadocs.notrequired"
+      description="Generate the API documentation">
+    <!-- Filter-Information for the java-doc generator and the rapla-language-files-->
+    <copy todir="${build.src}">
+       <fileset dir="${src.dir}">
+          <include name="${package.path}/**/*.java" />
+          <include name="**/package.html" />
+          <include name="**/overview.html" />
+       </fileset>
+       <filterset>
+          <filtersfile file="${main.dir}/${doc.properties}"/>
+       </filterset>
+    </copy>
+    <mkdir dir="${build.javadocs}" />
+    <javadoc packagenames="${packages}"
+             sourcepath="${build.src}"
+             destdir="${build.javadocs}"
+             author="true"
+             version="true"
+             use="false"
+             noindex="true"
+             windowtitle="${doc.name} API (${doc.version})"
+             bottom="Copyright &#169; ${doc.year} ${doc.copyright}. All Rights Reseserved."
+      >
+      <link href="http://java.sun.com/j2se/1.4.1/docs/api/"/>
+    </javadoc>
+  </target>
+
+ <!-- =================================================================== -->
+ <!--     Create the calendar distribution                               -->
+ <!-- =================================================================== -->
+  <target name="dist" depends="build">
+    <mkdir dir="${dist-calendar.dir}" />
+    <copy file="${main.dir}/buildcalendar.xml" tofile="${dist-calendar.dir}/build.xml"/>
+    <copy todir="${dist-calendar.dir}">
+        <fileset dir="${build.dir}" >
+           <include name="${main.lib}" />
+        </fileset>
+        <fileset dir="${main.dir}">
+           <include name="src/${package.path}/**" />
+           <include name="src/manifest" />
+           <include name="doc-calendar.properties" />
+           <include name="test-src/${package.path}/**" />
+        </fileset>
+    </copy> 
+  </target>
+
+
+ <!-- =================================================================== -->
+ <!-- Packages the distribution as .zip                                   -->
+ <!-- =================================================================== -->
+  <target name="zip" depends="dist">
+       <fixcrlf srcdir="${dist-calendar.dir}" eol="crlf">
+         <patternset refid="text-files"/>
+       </fixcrlf>
+       <zip zipfile="${dist.dir}/${tarball.name}.zip">
+            <!-- This is a workaround until tarfileset supports the prefix-->
+         <zipfileset dir="${dist.dir}/${tarball.name}" prefix="${tarball.name}"/>
+       </zip>
+  </target>
+
+</project>

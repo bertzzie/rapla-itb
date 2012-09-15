@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
+
+<web-app>
+  <!-- Servlet Configuration ========================================== -->
+
+  <servlet>
+    <servlet-name>RaplaServer</servlet-name>
+    <display-name>RaplaServer</display-name>
+    <description>Rapla</description>
+
+    <servlet-class>org.rapla.MainServlet</servlet-class>
+    <!-- Config file path relative to this file -->
+    <init-param>
+      <param-name>config-file</param-name>
+      <param-value>raplaserver.xconf</param-value>
+    </init-param>
+    <!-- Log-Config file path relative to this file -->
+    <init-param>
+      <param-name>log-config-file</param-name>
+      <param-value>raplaserver.xlog</param-value>
+    </init-param>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+
+ <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/rapla/*</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/rapla</url-pattern>
+  </servlet-mapping>
+
+  <!-- For compatibility reasons with version prior to 1.0RC1 -->
+  <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/server</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/index.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/raplaclient.jnlp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/raplaapplet.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/calendar.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/report.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RaplaServer</servlet-name>
+    <url-pattern>/export/*</url-pattern>
+  </servlet-mapping>
+
+  <!-- End of compatibility mappings -->
+
+  <welcome-file-list>
+    <welcome-file>redirect.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

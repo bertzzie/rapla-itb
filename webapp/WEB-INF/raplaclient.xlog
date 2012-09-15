@@ -1,0 +1,41 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<!-- For more information regarding logging see 
+   http://avalon.apache.org/excalibur/logger/index.html 
+-->
+<logkit log-level="INFO">
+    <factories>
+      <factory type="stream" class="org.apache.avalon.excalibur.logger.factory.StreamTargetFactory"/>
+      <factory type="file" class="org.apache.avalon.excalibur.logger.factory.FileTargetFactory"/>
+    </factories>
+
+    <targets> 
+      <stream id="root">
+         <stream>System.out</stream>
+         <format type="extended">
+           %5.5{priority} %21.21{time:yyyyMMdd HH:mm:ss:S} [%5.25{category}]: %{message}\n%{throwable}
+         </format>
+       </stream>
+<!-- If you want to log into a file you need to rename the stream id entry above and comment out the file entry. 
+       -->     
+       <file id="file">
+         <filename>${context-root}/logs/rapla-client.log</filename>
+         <format type="extended">
+           %5.5{priority} %21.21{time:yyyyMMdd HH:mm:ss:S} [%5.25{category}]: %{message}\n%{throwable}
+         </format>
+         <append>true</append>
+         <rotation type="revolving" init="1" max="4">
+           <size>1m</size>
+         </rotation>
+       </file>
+  
+   
+     </targets>
+
+     <categories>
+       <category name="" log-level="INFO">
+         <log-target id-ref="root"/> 
+         <log-target id-ref="file"/> 
+       </category>
+     </categories>
+
+</logkit>
