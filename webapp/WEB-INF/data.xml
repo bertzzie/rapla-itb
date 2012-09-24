@@ -115,7 +115,24 @@
 
    <rapla:users>
       <!-- Users of the system -->
-      <rapla:user id="user_1" username="admin" password="" name="" email="" isAdmin="true">
+      <rapla:user id="user_1" username="admin" password="md5:912ec803b2ce49e4a541068d495ab570" name="" email="" isAdmin="true">
+         <rapla:preferences>
+            <rapla:entry key="export_attendees" value="false"/>
+            <rapla:entry key="export_attendees_participation_status" value="TENTATIVE"/>
+            <rapla:entry key="org.rapla.calendarview">
+               <rapla:config>
+                  <calendar-options>
+                     <color>reservations_and_resources</color>
+                     <worktime>8-18</worktime>
+                     <exceptions-visible>true</exceptions-visible>
+                     <rows-per-hour>4</rows-per-hour>
+                     <exclude-days>1,7</exclude-days>
+                     <days-in-weekview>14</days-in-weekview>
+                     <first-day-of-week>2</first-day-of-week>
+                  </calendar-options>
+               </rapla:config>
+            </rapla:entry>
+         </rapla:preferences>
       </rapla:user>
    </rapla:users>
 
@@ -134,6 +151,33 @@
    </rapla:periods>
 
    <rapla:reservations>
+      <rapla:reservation id="reservation_1" owner="user_1" created-at="2012-09-21" last-changed="2012-09-21" last-changed-by="user_1">
+         <dynatt:defaultReservation>
+            <dynatt:name>test9</dynatt:name>
+         </dynatt:defaultReservation>
+         <rapla:appointment start-date="2012-09-19" start-time="09:15:00" end-date="2012-09-19" end-time="09:30:00"/>
+         <rapla:allocate idref="resource_1"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_2" owner="user_1" created-at="2012-09-21" last-changed="2012-09-21">
+         <dynatt:defaultReservation>
+            <dynatt:name>aaa</dynatt:name>
+         </dynatt:defaultReservation>
+         <rapla:appointment start-date="2019-06-27" start-time="08:00:00" end-date="2026-07-27" end-time="09:00:00"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_3" owner="user_1" created-at="2012-09-21" last-changed="2012-09-21">
+         <dynatt:defaultReservation>
+            <dynatt:name>SADFXCBXCVB</dynatt:name>
+         </dynatt:defaultReservation>
+         <rapla:appointment start-date="2020-05-27" start-time="08:00:00" end-date="2027-07-08" end-time="09:00:00"/>
+         <rapla:allocate idref="resource_1"/>
+      </rapla:reservation>
+      <rapla:reservation id="reservation_4" owner="user_1" created-at="2012-09-21" last-changed="2012-09-21">
+         <dynatt:defaultReservation>
+            <dynatt:name>bert</dynatt:name>
+         </dynatt:defaultReservation>
+         <rapla:appointment start-date="2012-09-21" start-time="08:00:00" end-date="2012-09-21" end-time="09:45:00"/>
+         <rapla:allocate idref="resource_1"/>
+      </rapla:reservation>
    </rapla:reservations>
 
 </rapla:data>
