@@ -1,0 +1,5 @@
+build.properties
+build/*
+dist/*
+eclipse-build/*
+temp/*
