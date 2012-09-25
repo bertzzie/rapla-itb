@@ -14,6 +14,10 @@ package org.rapla.storage.dbfile.tests;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
+import org.rapla.framework.RaplaContext;
+import org.rapla.framework.RaplaContextException;
+import org.rapla.framework.RaplaException;
+import org.rapla.storage.CachableStorageOperator;
 import org.rapla.storage.tests.AbstractOperatorTest;
 
 public class FileOperatorTest extends AbstractOperatorTest {
@@ -34,8 +38,21 @@ public class FileOperatorTest extends AbstractOperatorTest {
     protected String getFacadeName() {
         return "local-facade";
     }
-    
- 
+
+	public void testBadFile() throws RaplaContextException {
+		RaplaContext rc = getContext();
+		CachableStorageOperator operator = (CachableStorageOperator) 
+				rc.lookup(CachableStorageOperator.ROLE + "/brokenfile");
+		
+		Throwable re = null;
+		try {
+			operator.connect();
+		} catch (RaplaException e) {
+			re = e;
+		}
+		
+		assertTrue(re instanceof RaplaException);
+	}
 }
 
 

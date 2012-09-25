@@ -48,7 +48,7 @@
       </relax:define>
 
       <relax:define name="defaultPerson">
-         <relax:element nal;sakd;fkme="dynatt:defaultPerson">
+         <relax:element name="dynatt:defaultPerson">
             <doc:name lang="de">Person</doc:name>
             <doc:name lang="en">person</doc:name>
             <doc:name lang="fr">personne</doc:name>

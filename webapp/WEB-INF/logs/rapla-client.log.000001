@@ -1081,3 +1081,266 @@ org.rapla.framework.RaplaException: The passwords don't match!
 INFO  20120921 11:57:35:46  [rapla]: Change password for User admin
 INFO  20120921 11:58:35:823 [rapla.facade]: Logout admin
 INFO  20120921 11:58:35:899 [rapla]: Shutting down rapla-container
+INFO  20120924 13:40:47:854 [rapla]: ----------- Rapla startup mode = 1
+INFO  20120924 13:40:47:855 [rapla]: Default Locale= en_US
+INFO  20120924 13:40:47:855 [rapla]: Configured Locale= en_US
+INFO  20120924 13:40:48:181 [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120924 13:40:48:181 [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120924 13:40:48:181 [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120924 13:40:48:182 [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120924 13:40:48:182 [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120924 13:40:48:182 [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120924 13:40:48:182 [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120924 13:40:48:183 [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120924 13:40:48:183 [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120924 13:40:48:183 [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120924 13:40:48:183 [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120924 13:40:48:183 [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120924 13:40:48:183 [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120924 13:40:48:184 [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120924 13:40:48:184 [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120924 13:40:48:184 [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120924 13:40:48:184 [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120924 13:40:48:184 [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120924 13:40:48:185 [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120924 13:40:48:185 [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120924 13:40:48:185 [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120924 13:40:48:185 [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120924 13:40:48:185 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120924 13:40:48:185 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120924 13:40:48:186 [rapla]: Rapla.Version=@doc.version@
+INFO  20120924 13:40:48:186 [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120924 13:40:48:186 [rapla]: Java.Version=1.7.0_06
+INFO  20120924 13:40:55:37  [rapla]: Update Today Service: within 10:19:04
+INFO  20120924 13:41:07:145 [rapla]: Data:file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/data.xml
+INFO  20120924 13:41:31:379 [rapla.facade]: Login admin
+INFO  20120924 13:41:44:240 [rapla]: Initialize org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120924 13:41:44:241 [rapla]: Export2iCal plugin added
+INFO  20120924 13:41:44:241 [rapla]: Initialize org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120924 13:42:01:36  [rapla.facade]: Logout admin
+INFO  20120924 13:42:01:117 [rapla]: Shutting down rapla-container
+INFO  20120924 13:42:30:616 [rapla]: ----------- Rapla startup mode = 1
+INFO  20120924 13:42:30:617 [rapla]: Default Locale= en_US
+INFO  20120924 13:42:30:617 [rapla]: Configured Locale= en_US
+INFO  20120924 13:42:30:908 [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120924 13:42:30:908 [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120924 13:42:30:908 [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120924 13:42:30:909 [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120924 13:42:30:909 [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120924 13:42:30:910 [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120924 13:42:30:910 [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120924 13:42:30:910 [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120924 13:42:30:910 [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120924 13:42:30:910 [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120924 13:42:30:911 [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120924 13:42:30:911 [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120924 13:42:30:911 [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120924 13:42:30:911 [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120924 13:42:30:911 [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120924 13:42:30:911 [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120924 13:42:30:911 [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120924 13:42:30:912 [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120924 13:42:30:912 [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120924 13:42:30:912 [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120924 13:42:30:912 [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120924 13:42:30:912 [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120924 13:42:30:912 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120924 13:42:30:913 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120924 13:42:30:913 [rapla]: Rapla.Version=@doc.version@
+INFO  20120924 13:42:30:913 [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120924 13:42:30:913 [rapla]: Java.Version=1.7.0_06
+INFO  20120924 13:42:33:316 [rapla]: Update Today Service: within 10:17:26
+INFO  20120924 13:42:40:851 [rapla]: Data:file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/data.xml
+INFO  20120924 13:43:30:908 [rapla]: Shutting down rapla-container
+INFO  20120924 13:54:00:117 [rapla]: ----------- Rapla startup mode = 1
+INFO  20120924 13:54:00:118 [rapla]: Default Locale= en_US
+INFO  20120924 13:54:00:118 [rapla]: Configured Locale= en_US
+INFO  20120924 13:54:00:453 [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120924 13:54:00:454 [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120924 13:54:00:454 [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120924 13:54:00:455 [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120924 13:54:00:455 [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120924 13:54:00:455 [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120924 13:54:00:455 [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120924 13:54:00:455 [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120924 13:54:00:455 [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120924 13:54:00:456 [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120924 13:54:00:456 [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120924 13:54:00:456 [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120924 13:54:00:456 [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120924 13:54:00:457 [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120924 13:54:00:457 [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120924 13:54:00:457 [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120924 13:54:00:457 [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120924 13:54:00:458 [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120924 13:54:00:458 [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120924 13:54:00:458 [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120924 13:54:00:458 [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120924 13:54:00:458 [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120924 13:54:00:459 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120924 13:54:00:459 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120924 13:54:00:459 [rapla]: Rapla.Version=@doc.version@
+INFO  20120924 13:54:00:459 [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120924 13:54:00:459 [rapla]: Java.Version=1.7.0_06
+INFO  20120924 13:54:50:126 [rapla]: Update Today Service: within 10:05:09
+INFO  20120924 13:54:50:127 [rapla]: Data:file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/data.xml
+INFO  20120924 13:54:50:189 [rapla]: Shutting down rapla-container
+INFO  20120925 04:15:48:192 [rapla]: ----------- Rapla startup mode = 1
+INFO  20120925 04:15:48:205 [rapla]: Default Locale= en_US
+INFO  20120925 04:15:48:205 [rapla]: Configured Locale= en_US
+INFO  20120925 04:15:50:456 [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120925 04:15:50:456 [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120925 04:15:50:456 [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120925 04:15:50:459 [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120925 04:15:50:459 [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120925 04:15:50:459 [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120925 04:15:50:459 [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120925 04:15:50:460 [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120925 04:15:50:460 [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120925 04:15:50:460 [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120925 04:15:50:460 [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120925 04:15:50:460 [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120925 04:15:50:460 [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120925 04:15:50:461 [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120925 04:15:50:461 [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120925 04:15:50:461 [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120925 04:15:50:461 [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120925 04:15:50:461 [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120925 04:15:50:462 [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120925 04:15:50:462 [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120925 04:15:50:463 [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120925 04:15:50:463 [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120925 04:15:50:463 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120925 04:15:50:464 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120925 04:15:50:464 [rapla]: Rapla.Version=@doc.version@
+INFO  20120925 04:15:50:464 [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120925 04:15:50:464 [rapla]: Java.Version=1.7.0_06
+INFO  20120925 04:35:29:619 [rapla]: ----------- Rapla startup mode = 1
+INFO  20120925 04:35:29:620 [rapla]: Default Locale= en_US
+INFO  20120925 04:35:29:621 [rapla]: Configured Locale= en_US
+INFO  20120925 04:35:30:26  [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120925 04:35:30:26  [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120925 04:35:30:26  [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120925 04:35:30:27  [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120925 04:35:30:27  [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120925 04:35:30:27  [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120925 04:35:30:27  [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120925 04:35:30:28  [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120925 04:35:30:28  [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120925 04:35:30:28  [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120925 04:35:30:28  [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120925 04:35:30:28  [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120925 04:35:30:28  [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120925 04:35:30:29  [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120925 04:35:30:29  [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120925 04:35:30:29  [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120925 04:35:30:29  [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120925 04:35:30:29  [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120925 04:35:30:30  [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120925 04:35:30:30  [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120925 04:35:30:30  [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120925 04:35:30:30  [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120925 04:35:30:30  [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120925 04:35:30:30  [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120925 04:35:30:31  [rapla]: Rapla.Version=@doc.version@
+INFO  20120925 04:35:30:31  [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120925 04:35:30:31  [rapla]: Java.Version=1.7.0_06
+INFO  20120925 04:41:56:89  [rapla]: ----------- Rapla startup mode = 1
+INFO  20120925 04:41:56:90  [rapla]: Default Locale= en_US
+INFO  20120925 04:41:56:90  [rapla]: Configured Locale= en_US
+INFO  20120925 04:41:56:618 [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120925 04:41:56:618 [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120925 04:41:56:619 [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120925 04:41:56:619 [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120925 04:41:56:619 [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120925 04:41:56:620 [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120925 04:41:56:620 [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120925 04:41:56:620 [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120925 04:41:56:620 [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120925 04:41:56:620 [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120925 04:41:56:621 [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120925 04:41:56:621 [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120925 04:41:56:621 [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120925 04:41:56:621 [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120925 04:41:56:621 [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120925 04:41:56:621 [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120925 04:41:56:622 [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120925 04:41:56:622 [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120925 04:41:56:622 [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120925 04:41:56:622 [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120925 04:41:56:622 [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120925 04:41:56:622 [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120925 04:41:56:622 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120925 04:41:56:623 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120925 04:41:56:623 [rapla]: Rapla.Version=@doc.version@
+INFO  20120925 04:41:56:623 [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120925 04:41:56:623 [rapla]: Java.Version=1.7.0_06
+INFO  20120925 04:41:57:128 [rapla]: Update Today Service: within 19:18:02
+INFO  20120925 04:41:57:151 [rapla]: Data:file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/data.xml
+INFO  20120925 04:41:57:943 [rapla]: Shutting down rapla-container
+INFO  20120925 05:08:46:617 [rapla]: ----------- Rapla startup mode = 1
+INFO  20120925 05:08:46:618 [rapla]: Default Locale= en_US
+INFO  20120925 05:08:46:618 [rapla]: Configured Locale= en_US
+INFO  20120925 05:08:47:90  [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120925 05:08:47:90  [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120925 05:08:47:90  [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120925 05:08:47:91  [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120925 05:08:47:91  [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120925 05:08:47:91  [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120925 05:08:47:91  [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120925 05:08:47:91  [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120925 05:08:47:92  [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120925 05:08:47:92  [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120925 05:08:47:92  [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120925 05:08:47:92  [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120925 05:08:47:92  [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120925 05:08:47:92  [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120925 05:08:47:92  [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120925 05:08:47:93  [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120925 05:08:47:93  [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120925 05:08:47:93  [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120925 05:08:47:93  [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120925 05:08:47:93  [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120925 05:08:47:93  [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120925 05:08:47:94  [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120925 05:08:47:94  [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120925 05:08:47:94  [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120925 05:08:47:94  [rapla]: Rapla.Version=@doc.version@
+INFO  20120925 05:08:47:94  [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120925 05:08:47:94  [rapla]: Java.Version=1.7.0_06
+INFO  20120925 05:08:47:316 [rapla]: Update Today Service: within 18:51:12
+INFO  20120925 05:08:47:317 [rapla]: Data:file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/data.xml
+INFO  20120925 05:09:45:748 [rapla]: Shutting down rapla-container
+INFO  20120925 05:10:55:56  [rapla]: ----------- Rapla startup mode = 1
+INFO  20120925 05:10:55:57  [rapla]: Default Locale= en_US
+INFO  20120925 05:10:55:58  [rapla]: Configured Locale= en_US
+INFO  20120925 05:10:55:526 [rapla]: Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+INFO  20120925 05:10:55:526 [rapla]: Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+INFO  20120925 05:10:55:526 [rapla]: Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+INFO  20120925 05:10:55:527 [rapla]: Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+INFO  20120925 05:10:55:527 [rapla]: Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+INFO  20120925 05:10:55:527 [rapla]: Installed plugin org.rapla.plugin.periodwizard.PeriodWizardPlugin
+INFO  20120925 05:10:55:528 [rapla]: Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+INFO  20120925 05:10:55:528 [rapla]: Installed plugin org.rapla.plugin.occupationview.OccupationPlugin
+INFO  20120925 05:10:55:528 [rapla]: Installed plugin org.rapla.plugin.notification.NotificationPlugin
+INFO  20120925 05:10:55:528 [rapla]: Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+INFO  20120925 05:10:55:528 [rapla]: Installed plugin org.rapla.plugin.mail.MailPlugin
+INFO  20120925 05:10:55:528 [rapla]: Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+INFO  20120925 05:10:55:529 [rapla]: Installed plugin org.rapla.plugin.importusers.ImportUsersPlugin
+INFO  20120925 05:10:55:529 [rapla]: Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+INFO  20120925 05:10:55:529 [rapla]: Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+INFO  20120925 05:10:55:529 [rapla]: Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+INFO  20120925 05:10:55:529 [rapla]: Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+INFO  20120925 05:10:55:529 [rapla]: Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+INFO  20120925 05:10:55:530 [rapla]: Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+INFO  20120925 05:10:55:530 [rapla]: Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+INFO  20120925 05:10:55:530 [rapla]: Installed plugin org.rapla.plugin.appointmentmarker.AppointmentMarkerPlugin
+INFO  20120925 05:10:55:530 [rapla]: Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+INFO  20120925 05:10:55:530 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/rapla.xconf
+INFO  20120925 05:10:55:530 [rapla]: Config=file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/raplaclient.xlog
+INFO  20120925 05:10:55:531 [rapla]: Rapla.Version=@doc.version@
+INFO  20120925 05:10:55:531 [rapla]: Rapla.Build=@doc.buildtime@
+INFO  20120925 05:10:55:531 [rapla]: Java.Version=1.7.0_06
+INFO  20120925 05:10:55:766 [rapla]: Update Today Service: within 18:49:04
+INFO  20120925 05:10:55:783 [rapla]: Data:file:/C:/Users/bert/Desktop/Pengujian%20Perangkat%20Lunak/project/rapla/rapla-github/webapp/WEB-INF/data.xml
+INFO  20120925 05:10:55:845 [rapla]: Shutting down rapla-container

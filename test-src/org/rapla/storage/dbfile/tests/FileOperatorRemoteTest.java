@@ -16,17 +16,15 @@ import org.rapla.ServerTest;
 import org.rapla.storage.CachableStorageOperator;
 
 public class FileOperatorRemoteTest extends ServerTest {
-    CachableStorageOperator operator;
-    
-    public FileOperatorRemoteTest(String name) {
-        super(name);
-    }
-    
-   protected String getStorageName() {
-       return "storage-file";
-   }
-   
-  
+	CachableStorageOperator operator;
+
+	public FileOperatorRemoteTest(String name) {
+		super(name);
+	}
+
+	protected String getStorageName() {
+		return "storage-file";
+	}
 }
 
 

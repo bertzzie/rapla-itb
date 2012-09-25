@@ -60,6 +60,11 @@
     <encoding>utf-8</encoding>
     <file>test.xml</file>
   </file-storage>
+  
+  <file-storage id="brokenfile" activation="request">
+  	<encoding>utf-8</encoding>
+  	<file>testbroken.xml</file>
+  </file-storage>
 
   <db-storage id="sql" activation="request">
     <!-- HSQLDB Settings 
