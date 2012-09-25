@@ -78,6 +78,20 @@ public class UserTest extends ServletTestBase {
         testFacade.remove( newUser );
         // first create a new resource and set the permissions
     }
+    
+    public void testUserEmailValidation() {
+    	Throwable t = null;
+    	
+    	try {
+    		User user = adminFacade.newUser();
+    		user.setEmail("bertzzie");
+    	}
+    	catch (RaplaException re) {
+    		t = re;
+    	}
+    	
+    	assertTrue(t instanceof RaplaException);
+    }
 
 
 }

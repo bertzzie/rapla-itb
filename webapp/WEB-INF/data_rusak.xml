@@ -24,9 +24,6 @@
             <doc:name lang="en">See events of other users</doc:name>
             <doc:name lang="fr">Voir les événements d'autres utilisateurs</doc:name>
          </rapla:category>
-         <rapla:category key="c1">
-            <doc:name lang="en">New category</doc:name>
-         </rapla:category>
       </rapla:category>
    </rapla:categories>
 
@@ -51,7 +48,7 @@
       </relax:define>
 
       <relax:define name="defaultPerson">
-         <relax:element name="dynatt:defaultPerson">
+         <relax:element nal;sakd;fkme="dynatt:defaultPerson">
             <doc:name lang="de">Person</doc:name>
             <doc:name lang="en">person</doc:name>
             <doc:name lang="fr">personne</doc:name>
@@ -99,27 +96,11 @@
          </relax:element>
       </relax:define>
 
-      <relax:define name="reservation1">
-         <relax:element name="dynatt:reservation1">
-            <doc:name lang="en">testing</doc:name>
-            <doc:annotations>
-               <rapla:annotation key="colors">rapla:automated</rapla:annotation>
-               <rapla:annotation key="classification-type">reservation</rapla:annotation>
-               <rapla:annotation key="nameformat">dsfs</rapla:annotation>
-            </doc:annotations>
-            <relax:element name="name">
-               <doc:name lang="en">Event name</doc:name>
-               <relax:data type="string"/>
-            </relax:element>
-         </relax:element>
-      </relax:define>
-
       <relax:start>
          <relax:choice>
             <relax:ref name="defaultResource"/>
             <relax:ref name="defaultPerson"/>
             <relax:ref name="defaultReservation"/>
-            <relax:ref name="reservation1"/>
          </relax:choice>
       </relax:start>
    </relax:grammar>
@@ -153,14 +134,6 @@
             </rapla:entry>
          </rapla:preferences>
       </rapla:user>
-      <rapla:user id="user_2" username="testubg" password="md5:098f6bcd4621d373cade4e832627b4f6" name="test" email="test" isAdmin="false">
-         <rapla:group key="category[key='modify-preferences']"/>
-         <rapla:group key="category[key='read-events-from-others']"/>
-      </rapla:user>
-      <rapla:user id="user_3" username="bertzzie" name="bertzzie" email="bertzzie" isAdmin="false">
-         <rapla:group key="category[key='modify-preferences']"/>
-         <rapla:group key="category[key='read-events-from-others']"/>
-      </rapla:user>
    </rapla:users>
 
    <rapla:resources>
@@ -175,7 +148,6 @@
    </rapla:resources>
 
    <rapla:periods>
-      <rapla:period id="period_1" name="teaseaf" start="2012-09-25" end="2012-10-02"/>
    </rapla:periods>
 
    <rapla:reservations>
@@ -204,13 +176,6 @@
             <dynatt:name>bert</dynatt:name>
          </dynatt:defaultReservation>
          <rapla:appointment start-date="2012-09-21" start-time="08:00:00" end-date="2012-09-21" end-time="09:45:00"/>
-         <rapla:allocate idref="resource_1"/>
-      </rapla:reservation>
-      <rapla:reservation id="reservation_5" owner="user_1" created-at="2012-09-25" last-changed="2012-09-25" last-changed-by="user_1">
-         <dynatt:defaultReservation>
-            <dynatt:name>asdfasdfas</dynatt:name>
-         </dynatt:defaultReservation>
-         <rapla:appointment start-date="2012-09-27" start-time="10:30:00" end-date="2012-09-27" end-time="15:00:00"/>
          <rapla:allocate idref="resource_1"/>
       </rapla:reservation>
    </rapla:reservations>
