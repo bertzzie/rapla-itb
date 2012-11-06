@@ -4,3 +4,4 @@ dist/*
 eclipse-build/*
 temp/*
 webapp/WEB-INF/*
+report/*

@@ -139,6 +139,7 @@ Definition as published by the Open Source Initiative (OSI).
         <!-- Information about the compiler -->
         <!-- property name="build.compiler" value="javac1.3"/-->
         <property name="debug" value="on" />
+    	<property name="debuglevel" value="lines,vars,source" />
         <property name="optimize" value="off" />
         <property name="deprecation" value="on" />        
         <property name="verbose" value="no" />
@@ -209,7 +210,7 @@ Definition as published by the Open Source Initiative (OSI).
 
     <target name="compile" depends="prepare">
         <!-- Compile the java code from ${src} into ${build.dir} -->
-        <javac srcdir="${src.dir}" destdir="${build.dest}" debug="${debug}" source="${target_vm}" target="${target_vm}" optimize="${optimize}" deprecation="${deprecation}" verbose="${verbose}">
+        <javac srcdir="${src.dir}" destdir="${build.dest}" debug="${debug}" debuglevel="${debuglevel}" source="${target_vm}" target="${target_vm}" optimize="${optimize}" deprecation="${deprecation}" verbose="${verbose}">
             <classpath>
                 <fileset dir="${lib.dir}">
                     <patternset refid="default-compile-libraries" />
@@ -302,7 +303,7 @@ Definition as published by the Open Source Initiative (OSI).
     	<fixcrlf srcdir="${generated.dir}">
     	    <include name="**/*.java" />
     	</fixcrlf>
-        <javac srcdir="${generated.dir}" destdir="${build.dest}" source="${target_vm}" target="${target_vm}" verbose="${verbose}">
+        <javac srcdir="${generated.dir}" destdir="${build.dest}" source="${target_vm}" target="${target_vm}" verbose="${verbose}" debug="${debug}" debuglevel="${debuglevel}">
             <include name="**/*.java" />
         </javac>
         <!--    <delete dir="${temp.dir}/languages" /> -->
@@ -718,7 +719,7 @@ Definition as published by the Open Source Initiative (OSI).
     <!-- =================================================================== -->
     <target name="compile-tests" depends="prepare,compile,compile-resources,generate-plugin-meta">
         <mkdir dir="${build.test}" />
-        <javac srcdir="${testsrc.dir}" destdir="${build.test}" debug="${debug}" source="${target_vm}" target="${target_vm}" optimize="${optimize}" deprecation="${deprecation}">
+        <javac srcdir="${testsrc.dir}" destdir="${build.test}" debug="${debug}" debuglevel="${debuglevel}" source="${target_vm}" target="${target_vm}" optimize="${optimize}" deprecation="${deprecation}">
             <classpath>
                 <fileset dir="${lib.dir}">
                     <patternset refid="default-compile-libraries" />
@@ -817,5 +818,30 @@ Definition as published by the Open Source Initiative (OSI).
     <target name="clean-test" depends="init">
         <delete dir="${test.dir}" />
     </target>
-
+	
+	<path id="pitest.path">
+	    <pathelement location="lib/pitest-0.28.jar" />
+	    <pathelement location="lib/pitest-ant-0.28.jar" />
+	</path>
+	<path id="test.path">
+		    <pathelement location="build/classes" />
+		    <pathelement location="build/test/classes" />
+		    <!-- the path where I put JUnit library -->
+		    <pathelement location="lib/junit-4.10.jar" />
+		</path>
+    <taskdef name="pitest" classname="org.pitest.ant.PitestTask" classpathref="pitest.path" />
+	
+	<target name="mutationCoverage">
+		<path id="mutation.path">
+		    <path refid="pitest.path"/>
+		    <path refid="test.path"/>
+		</path>
+		<pitest classpath="mutation.path"
+		        targetClasses="org.rapla.*"
+		        targetTests="org.rapla.*"
+			    reportDir="${basedir}/report"
+		        sourceDir="${src.dir}"
+			    mutators="CONDITIONALS_BOUNDARY,NEGATE_CONDITIONALS,MATH,INCREMENTS,INVERT_NEGS,INLINE_CONSTS,RETURN_VALS,VOID_METHOD_CALLS,NON_VOID_METHOD_CALLS,CONSTRUCTOR_CALLS,EXPERIMENTAL_INLINE_CONSTS,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_SWITCH"
+		/>
+	</target>
 </project>
