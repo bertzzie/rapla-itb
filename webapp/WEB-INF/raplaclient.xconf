@@ -24,14 +24,16 @@
   <rapla-client id="client"/>
 
   <facade id="facade">
-    <store>remote</store>
+    <store>file</store>
   </facade>
 
-  <remote-storage id="remote">
-    <!-- replace ${download-url} 
-    with a hardcoded url to your server like http://myhost:8051/
-    -->
-    <server>${download-url}</server>
-  </remote-storage>
-
+  <file-storage id="file">
+    <!--Only utf-8 is tested yet-->
+    <encoding>utf-8</encoding>
+    <!-- The path of the data-file absolute or relative to
+         configuration (this file) -->
+    <file>data.xml</file>
+    <validate>no</validate>
+    <includeIds>no</includeIds>
+  </file-storage>
 </rapla-config>
